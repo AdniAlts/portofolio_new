@@ -279,8 +279,11 @@
                 
                 <!-- Subtitle -->
                 <div class="max-w-2xl opacity-0 animate-fade-in" style="animation-delay: 0.5s;">
-                    <p id="hero-role" class="text-lg md:text-xl text-neutral-300 dark:text-neutral-400 font-light tracking-wide mb-6 text-fade">
-                        Multidisciplinary Developer
+                    <p id="hero-role" class="text-lg md:text-xl text-neutral-300 dark:text-neutral-400 font-light tracking-wide mb-2 text-fade min-h-[2rem]">
+                        <span id="typing-text"></span><span id="cursor" class="inline-block w-0.5 h-5 bg-neutral-300 dark:bg-neutral-400 ml-1 animate-pulse"></span>
+                    </p>
+                    <p class="text-sm md:text-base text-neutral-500 dark:text-neutral-600 font-light tracking-widest uppercase mb-6">
+                        Surabaya, Indonesia
                     </p>
                     <p id="hero-description" class="text-sm md:text-base text-neutral-400 dark:text-neutral-500 font-light leading-relaxed max-w-xl text-fade">
                         A multidisciplinary developer helping build modern digital experiences through clean visuals, thoughtful interactions, and purposeful design.
@@ -603,10 +606,10 @@
                 </form>
 
                 <div class="flex justify-center gap-8 mt-16">
-                    <a href="#" class="text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors"><i class="fab fa-github text-xl"></i></a>
-                    <a href="#" class="text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
-                    <a href="#" class="text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors"><i class="fab fa-twitter text-xl"></i></a>
-                    <a href="#" class="text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors"><i class="fas fa-envelope text-xl"></i></a>
+                    <a href="https://github.com/AdniAlts" class="text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors"><i class="fab fa-github text-xl"></i></a>
+                    <a href="https://www.linkedin.com/in/abubakar-adni/" class="text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+                    <a href="https://www.instagram.com/adnialatas_/" class="text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors"><i class="fab fa-instagram text-xl"></i></a>
+                    <a href="https://mail.google.com/mail/u/0/?to=abubakaradni16@gmail.com&fs=1&tf=cm" class="text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors"><i class="fas fa-envelope text-xl"></i></a>
                 </div>
             </div>
         </section>
@@ -772,6 +775,9 @@
 
             // Initial Lang Load
             updateLanguage(currentLang);
+            
+            // Start typing animation
+            setTimeout(() => typeRole(), 1000);
 
             // Parallax Effect (optimized with throttle)
             const heroParallax = document.querySelector('.hero-parallax');
@@ -793,21 +799,58 @@
             // Hero Content
             const heroRole = document.getElementById('hero-role');
             const heroDescription = document.getElementById('hero-description');
+            const typingText = document.getElementById('typing-text');
             
             const heroContent = {
                 en: {
-                    role: 'Multidisciplinary Developer',
+                    roles: ['Web Developer', 'IT Enthusiast', 'Software Engineering Student', 'Language Learner'],
                     description: 'A multidisciplinary developer helping build modern digital experiences through clean visuals, thoughtful interactions, and purposeful design.'
                 },
                 id: {
-                    role: 'Pengembang Multidisipliner',
+                    roles: ['Pembuat Web', 'IT Antusias', 'Mahasiswa Teknik Informatika', 'Pelajar Bahasa'],
                     description: 'Seorang pengembang multidisipliner yang membantu membangun pengalaman digital modern melalui visual yang bersih, interaksi yang terarah, dan desain yang bermakna.'
                 }
             };
 
+            let currentRoleIndex = 0;
+            let currentCharIndex = 0;
+            let isDeleting = false;
+            let typingSpeed = 100;
+
+            function typeRole() {
+                const roles = heroContent[currentLang].roles;
+                const currentRole = roles[currentRoleIndex];
+                
+                if (isDeleting) {
+                    typingText.textContent = currentRole.substring(0, currentCharIndex - 1);
+                    currentCharIndex--;
+                    typingSpeed = 50;
+                } else {
+                    typingText.textContent = currentRole.substring(0, currentCharIndex + 1);
+                    currentCharIndex++;
+                    typingSpeed = 100;
+                }
+
+                if (!isDeleting && currentCharIndex === currentRole.length) {
+                    // Pause at end
+                    typingSpeed = 2000;
+                    isDeleting = true;
+                } else if (isDeleting && currentCharIndex === 0) {
+                    isDeleting = false;
+                    currentRoleIndex = (currentRoleIndex + 1) % roles.length;
+                    typingSpeed = 500;
+                }
+
+                setTimeout(typeRole, typingSpeed);
+            }
+
             function updateHeroContent(lang) {
-                if (heroRole) heroRole.textContent = heroContent[lang].role;
                 if (heroDescription) heroDescription.textContent = heroContent[lang].description;
+                // Reset typing animation
+                currentRoleIndex = 0;
+                currentCharIndex = 0;
+                isDeleting = false;
+                if (typingText) typingText.textContent = '';
             }
 
             // Scroll Animations
