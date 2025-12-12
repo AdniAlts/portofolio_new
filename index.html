@@ -1,91 +1,94 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Abubakar Adni — Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
     <script>
         tailwind.config = {
-            darkMode: 'class',
+            darkMode: "class",
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                        sans: ["Inter", "sans-serif"],
+                        display: ["Plus Jakarta Sans", "sans-serif"],
                     },
                     colors: {
                         neutral: {
-                            50: '#fafafa',
-                            100: '#f5f5f5',
-                            200: '#e5e5e5',
-                            300: '#d4d4d4',
-                            400: '#a3a3a3',
-                            500: '#737373',
-                            600: '#525252',
-                            700: '#404040',
-                            800: '#262626',
-                            900: '#171717',
-                            950: '#0a0a0a',
+                            50: "#fafafa",
+                            100: "#f5f5f5",
+                            200: "#e5e5e5",
+                            300: "#d4d4d4",
+                            400: "#a3a3a3",
+                            500: "#737373",
+                            600: "#525252",
+                            700: "#404040",
+                            800: "#262626",
+                            900: "#171717",
+                            950: "#0a0a0a",
                         },
                         accent: {
-                            light: '#E0E7FF', /* Indigo 100 */
-                            DEFAULT: '#818CF8', /* Indigo 400 */
-                            dark: '#4F46E5', /* Indigo 600 */
-                            soft: '#C7D2FE', /* Indigo 200 */
-                        }
+                            light: "#E0E7FF" /* Indigo 100 */,
+                            DEFAULT: "#818CF8" /* Indigo 400 */,
+                            dark: "#4F46E5" /* Indigo 600 */,
+                            soft: "#C7D2FE" /* Indigo 200 */,
+                        },
                     },
                     animation: {
-                        'float-slow': 'float 8s ease-in-out infinite',
-                        'float-delayed': 'float 8s ease-in-out 4s infinite',
-                        'fade-in-up': 'fadeInUp 1s ease-out forwards',
-                        'fade-in': 'fadeIn 1.2s ease-out forwards',
-                        'slide-up': 'slideUp 0.8s ease-out forwards',
-                        'grain': 'grain 8s steps(10) infinite',
-                        'slide-infinite': 'slideInfinite 30s linear infinite',
+                        "float-slow": "float 8s ease-in-out infinite",
+                        "float-delayed": "float 8s ease-in-out 4s infinite",
+                        "fade-in-up": "fadeInUp 1s ease-out forwards",
+                        "fade-in": "fadeIn 1.2s ease-out forwards",
+                        "slide-up": "slideUp 0.8s ease-out forwards",
+                        grain: "grain 8s steps(10) infinite",
+                        "slide-infinite": "slideInfinite 30s linear infinite",
                     },
                     keyframes: {
                         float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-20px)' },
+                            "0%, 100%": { transform: "translateY(0)" },
+                            "50%": { transform: "translateY(-20px)" },
                         },
                         fadeInUp: {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                            "0%": { opacity: "0", transform: "translateY(20px)" },
+                            "100%": { opacity: "1", transform: "translateY(0)" },
                         },
                         fadeIn: {
-                            '0%': { opacity: '0' },
-                            '100%': { opacity: '1' },
+                            "0%": { opacity: "0" },
+                            "100%": { opacity: "1" },
                         },
                         slideUp: {
-                            '0%': { opacity: '0', transform: 'translateY(30px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                            "0%": { opacity: "0", transform: "translateY(30px)" },
+                            "100%": { opacity: "1", transform: "translateY(0)" },
                         },
                         grain: {
-                            '0%, 100%': { transform: 'translate(0, 0)' },
-                            '10%': { transform: 'translate(-5%, -10%)' },
-                            '20%': { transform: 'translate(-15%, 5%)' },
-                            '30%': { transform: 'translate(7%, -25%)' },
-                            '40%': { transform: 'translate(-5%, 25%)' },
-                            '50%': { transform: 'translate(-15%, 10%)' },
-                            '60%': { transform: 'translate(15%, 0%)' },
-                            '70%': { transform: 'translate(0%, 15%)' },
-                            '80%': { transform: 'translate(3%, 35%)' },
-                            '90%': { transform: 'translate(-10%, 10%)' },
+                            "0%, 100%": { transform: "translate(0, 0)" },
+                            "10%": { transform: "translate(-5%, -10%)" },
+                            "20%": { transform: "translate(-15%, 5%)" },
+                            "30%": { transform: "translate(7%, -25%)" },
+                            "40%": { transform: "translate(-5%, 25%)" },
+                            "50%": { transform: "translate(-15%, 10%)" },
+                            "60%": { transform: "translate(15%, 0%)" },
+                            "70%": { transform: "translate(0%, 15%)" },
+                            "80%": { transform: "translate(3%, 35%)" },
+                            "90%": { transform: "translate(-10%, 10%)" },
                         },
                         slideInfinite: {
-                            '0%': { transform: 'translateX(0)' },
-                            '100%': { transform: 'translateX(-50%)' },
-                        }
-                    }
-                }
-            }
-        }
+                            "0%": { transform: "translateX(0)" },
+                            "100%": { transform: "translateX(-50%)" },
+                        },
+                    },
+                },
+            },
+        };
     </script>
     <style>
         /* Soft Grain Texture */
@@ -100,7 +103,7 @@
             z-index: 50;
             opacity: 0.3;
         }
-        
+
         html.dark .bg-grain {
             opacity: 0.15;
         }
@@ -109,16 +112,20 @@
         ::-webkit-scrollbar {
             width: 6px;
         }
+
         ::-webkit-scrollbar-track {
             background: transparent;
         }
+
         ::-webkit-scrollbar-thumb {
             background: #d4d4d4;
             border-radius: 10px;
         }
+
         html.dark ::-webkit-scrollbar-thumb {
             background: #404040;
         }
+
         ::-webkit-scrollbar-thumb:hover {
             background: #a3a3a3;
         }
@@ -127,6 +134,7 @@
         .text-fade {
             transition: opacity 0.3s ease-in-out;
         }
+
         .text-fade.hidden-text {
             opacity: 0;
         }
@@ -136,23 +144,25 @@
             display: inline-block;
             position: relative;
         }
-        
+
         /* Minimal Tilt */
         .tilt-card {
             transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             transform-style: preserve-3d;
         }
+
         .tilt-card:hover {
             transform: perspective(1000px) rotateX(2deg) rotateY(2deg) scale(1.01);
         }
 
         /* Focus Glow for Inputs */
         .input-group:focus-within label {
-            color: #818CF8;
+            color: #818cf8;
         }
+
         .input-group:focus-within .input-underline {
             width: 100%;
-            background-color: #818CF8;
+            background-color: #818cf8;
         }
 
         /* Hero Parallax */
@@ -164,8 +174,9 @@
         .nav-link {
             position: relative;
         }
+
         .nav-link::after {
-            content: '';
+            content: "";
             position: absolute;
             bottom: -4px;
             left: 0;
@@ -174,14 +185,17 @@
             background: currentColor;
             transition: width 0.3s ease;
         }
+
         .nav-link:hover::after,
         .nav-link.active::after {
             width: 100%;
         }
+
         .nav-link.active {
             color: #000000;
             text-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
         }
+
         html.dark .nav-link.active {
             color: #ffffff;
             text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
@@ -192,49 +206,100 @@
             position: absolute;
             width: 100%;
             height: 2px;
-            background: linear-gradient(90deg, transparent, rgba(239, 68, 68, 0.4), transparent);
+            background: linear-gradient(90deg,
+                    transparent,
+                    rgba(239, 68, 68, 0.4),
+                    transparent);
             top: 45%;
             left: 0;
             opacity: 0.6;
         }
+        
+        @layer base {
+
+            /* Override warna text autofill */
+            input:-webkit-autofill,
+            textarea:-webkit-autofill,
+            select:-webkit-autofill {
+                -webkit-text-fill-color: inherit !important;
+                transition: background-color 5000s ease-in-out 0s;
+            }
+
+            /* SOLUSI BLUE BOX (Updated) */
+            /* Light Mode */
+            input:-webkit-autofill {
+                -webkit-box-shadow: 0 0 0px 1000px #fafafa inset !important;
+            }
+
+            /* Dark Mode */
+            .dark input:-webkit-autofill {
+                -webkit-box-shadow: 0 0 0px 1000px #0a0a0a inset !important;
+                -webkit-text-fill-color: #fff !important;
+            }
+        }
+
+        /* KITA TIDAK BUTUH LAGI CSS KHUSUS UNTUK LABEL BERTABRAKAN
+       karena logika di HTML (Langkah 1) sudah menangani masalah ini secara permanen.
+       Hapus kode: input:-webkit-autofill ~ label { ... }
+    */
+
+        .input-underline {
+            background-color: #ef4444;
+        }
+
+        .dark .input-underline {
+            background-color: #f87171;
+        }
     </style>
 </head>
-<body class="bg-neutral-50 text-neutral-800 dark:bg-neutral-950 dark:text-neutral-200 transition-colors duration-700 ease-in-out antialiased overflow-x-hidden selection:bg-accent-soft selection:text-accent-dark">
 
+<body
+    class="bg-neutral-50 text-neutral-800 dark:bg-neutral-950 dark:text-neutral-200 transition-colors duration-700 ease-in-out antialiased overflow-x-hidden selection:bg-accent-soft selection:text-accent-dark">
     <!-- Grain Overlay -->
     <div class="bg-grain"></div>
 
     <!-- Navigation -->
     <nav id="main-nav" class="fixed top-0 w-full z-50 backdrop-blur-md bg-transparent transition-all duration-500">
         <div class="max-w-7xl mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
-            <div class="flex items-center space-x-4 md:space-x-12 text-[10px] font-semibold tracking-[0.2em] uppercase text-black dark:text-white drop-shadow-lg">
-                <a href="#hero" class="nav-link active hover:opacity-80 transition-colors hidden md:inline-block">Adni.</a>
+            <div
+                class="flex items-center space-x-4 md:space-x-12 text-[10px] font-semibold tracking-[0.2em] uppercase text-black dark:text-white drop-shadow-lg">
+                <a href="#hero"
+                    class="nav-link active hover:opacity-80 transition-colors hidden md:inline-block">Adni.</a>
                 <a href="#about" class="nav-link hover:opacity-80 transition-colors" data-i18n="nav_about">About</a>
-                <a href="#experience" class="nav-link hover:opacity-80 transition-colors" data-i18n="nav_experience">Experience</a>
-                <a href="#projects" class="nav-link hover:opacity-80 transition-colors" data-i18n="nav_projects">Projects</a>
-                <a href="#contact" class="nav-link hover:opacity-80 transition-colors" data-i18n="nav_contact">Contact</a>
+                <a href="#experience" class="nav-link hover:opacity-80 transition-colors"
+                    data-i18n="nav_experience">Experience</a>
+                <a href="#projects" class="nav-link hover:opacity-80 transition-colors"
+                    data-i18n="nav_projects">Projects</a>
+                <a href="#contact" class="nav-link hover:opacity-80 transition-colors"
+                    data-i18n="nav_contact">Contact</a>
             </div>
 
             <div class="flex items-center space-x-3">
-                <button id="lang-toggle" class="hidden md:block text-[10px] font-semibold tracking-widest px-3 py-1.5 rounded-full border border-black/50 dark:border-white/50 hover:border-black dark:hover:border-white transition-all text-black dark:text-white drop-shadow-lg">
+                <button id="lang-toggle"
+                    class="hidden md:block text-[10px] font-semibold tracking-widest px-3 py-1.5 rounded-full border border-black/50 dark:border-white/50 hover:border-black dark:hover:border-white transition-all text-black dark:text-white drop-shadow-lg">
                     <span class="text-fade">EN</span>
                 </button>
-                <button id="theme-toggle" class="hidden md:flex w-8 h-8 items-center justify-center rounded-full hover:bg-black/20 dark:hover:bg-white/20 transition-colors text-black dark:text-white drop-shadow-lg">
+                <button id="theme-toggle"
+                    class="hidden md:flex w-8 h-8 items-center justify-center rounded-full hover:bg-black/20 dark:hover:bg-white/20 transition-colors text-black dark:text-white drop-shadow-lg">
                     <i class="fas fa-moon dark:hidden text-xs"></i>
                     <i class="fas fa-sun hidden dark:block text-xs"></i>
                 </button>
-                <button id="mobile-menu-toggle" class="md:hidden w-8 h-8 flex items-center justify-center text-black dark:text-white drop-shadow-lg">
+                <button id="mobile-menu-toggle"
+                    class="md:hidden w-8 h-8 flex items-center justify-center text-black dark:text-white drop-shadow-lg">
                     <i class="fas fa-bars text-sm"></i>
                 </button>
             </div>
         </div>
-        
+
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden absolute top-16 right-0 w-48 bg-white dark:bg-neutral-900 shadow-xl border border-neutral-200 dark:border-neutral-800 rounded-bl-2xl overflow-hidden">
-            <button id="mobile-lang-toggle" class="w-full text-left px-6 py-3 text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-16 right-0 w-48 bg-white dark:bg-neutral-900 shadow-xl border border-neutral-200 dark:border-neutral-800 rounded-bl-2xl overflow-hidden">
+            <button id="mobile-lang-toggle"
+                class="w-full text-left px-6 py-3 text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">
                 <i class="fas fa-globe mr-2 text-xs"></i><span class="mobile-lang-text">EN / ID</span>
             </button>
-            <button id="mobile-theme-toggle" class="w-full text-left px-6 py-3 text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">
+            <button id="mobile-theme-toggle"
+                class="w-full text-left px-6 py-3 text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">
                 <i class="fas fa-moon dark:hidden text-xs mr-2"></i>
                 <i class="fas fa-sun hidden dark:inline text-xs mr-2"></i>
                 <span class="dark:hidden">Dark Mode</span>
@@ -250,94 +315,132 @@
             <div class="hero-parallax absolute inset-0 z-0">
                 <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70 z-10"></div>
                 <div class="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30 z-10"></div>
-                <img 
-                    src="hero.png" 
-                    alt="Abubakar Adni Portrait" 
-                    class="w-full h-full object-cover object-top opacity-60"
-                />
+                <img src="hero.png" alt="Abubakar Adni Portrait"
+                    class="w-full h-full object-cover object-top opacity-60" />
                 <!-- Artistic Red Streak -->
                 <div class="red-streak"></div>
             </div>
-            
+
             <!-- Grain Texture Overlay -->
-            <div class="absolute inset-0 z-20 opacity-10 mix-blend-overlay" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');"></div>
+            <div class="absolute inset-0 z-20 opacity-10 mix-blend-overlay" style="
+            background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');
+          "></div>
 
             <!-- Social Links - Left Side -->
-            <div class="absolute left-8 top-1/2 -translate-y-1/2 z-30 hidden lg:flex flex-col gap-6 text-neutral-400 dark:text-neutral-500 text-xs tracking-widest">
-                <a href="#" class="hover:text-white transition-colors duration-300 opacity-0 animate-slide-up" style="animation-delay: 0.3s;">IG</a>
-                <a href="#" class="hover:text-white transition-colors duration-300 opacity-0 animate-slide-up" style="animation-delay: 0.4s;">FB</a>
-                <a href="#" class="hover:text-white transition-colors duration-300 opacity-0 animate-slide-up" style="animation-delay: 0.5s;">IN</a>
-                <a href="#" class="hover:text-white transition-colors duration-300 opacity-0 animate-slide-up" style="animation-delay: 0.6s;">BE</a>
+            <div
+                class="absolute left-8 top-1/2 -translate-y-1/2 z-30 hidden lg:flex flex-col gap-6 text-neutral-400 dark:text-neutral-500 text-xs tracking-widest">
+                <a href="#" class="hover:text-white transition-colors duration-300 opacity-0 animate-slide-up"
+                    style="animation-delay: 0.3s">IG</a>
+                <a href="#" class="hover:text-white transition-colors duration-300 opacity-0 animate-slide-up"
+                    style="animation-delay: 0.4s">FB</a>
+                <a href="#" class="hover:text-white transition-colors duration-300 opacity-0 animate-slide-up"
+                    style="animation-delay: 0.5s">IN</a>
+                <a href="#" class="hover:text-white transition-colors duration-300 opacity-0 animate-slide-up"
+                    style="animation-delay: 0.6s">BE</a>
             </div>
 
             <!-- Main Content -->
             <div class="relative z-30 h-full flex flex-col justify-center px-8 md:px-16 lg:px-24 max-w-7xl mx-auto">
                 <!-- Giant Name -->
-                <h1 class="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tight text-white leading-none mb-6 opacity-0 animate-fade-in" style="animation-delay: 0.2s;">
-                    ABUBAKAR<br/>ADNI
+                <h1 class="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tight text-white leading-none mb-6 opacity-0 animate-fade-in"
+                    style="animation-delay: 0.2s">
+                    ABUBAKAR<br />ADNI
                 </h1>
-                
+
                 <!-- Subtitle -->
-                <div class="max-w-2xl opacity-0 animate-fade-in" style="animation-delay: 0.5s;">
-                    <p id="hero-role" class="text-lg md:text-xl text-neutral-300 dark:text-neutral-400 font-light tracking-wide mb-2 text-fade min-h-[2rem]">
-                        <span id="typing-text"></span><span id="cursor" class="inline-block w-0.5 h-5 bg-neutral-300 dark:bg-neutral-400 ml-1 animate-pulse"></span>
+                <div class="max-w-2xl opacity-0 animate-fade-in" style="animation-delay: 0.5s">
+                    <p id="hero-role"
+                        class="text-lg md:text-xl text-neutral-300 dark:text-neutral-400 font-light tracking-wide mb-2 text-fade min-h-[2rem]">
+                        <span id="typing-text"></span><span id="cursor"
+                            class="inline-block w-0.5 h-5 bg-neutral-300 dark:bg-neutral-400 ml-1 animate-pulse"></span>
                     </p>
-                    <p class="text-sm md:text-base text-neutral-500 dark:text-neutral-600 font-light tracking-widest uppercase mb-6">
+                    <p
+                        class="text-sm md:text-base text-neutral-500 dark:text-neutral-600 font-light tracking-widest uppercase mb-6">
                         Surabaya, Indonesia
                     </p>
-                    <p id="hero-description" class="text-sm md:text-base text-neutral-400 dark:text-neutral-500 font-light leading-relaxed max-w-xl text-fade">
-                        A multidisciplinary developer helping build modern digital experiences through clean visuals, thoughtful interactions, and purposeful design.
+                    <p id="hero-description"
+                        class="text-sm md:text-base text-neutral-400 dark:text-neutral-500 font-light leading-relaxed max-w-xl text-fade">
+                        A multidisciplinary developer helping build modern digital
+                        experiences through clean visuals, thoughtful interactions, and
+                        purposeful design.
                     </p>
                 </div>
 
                 <!-- CTA Button -->
-                <div class="mt-12 opacity-0 animate-fade-in" style="animation-delay: 0.8s;">
-                    <a href="#projects" class="inline-flex items-center justify-center w-14 h-14 rounded-full border border-white/30 hover:border-white/60 text-white transition-all duration-300 hover:scale-110 group">
+                <div class="mt-12 opacity-0 animate-fade-in" style="animation-delay: 0.8s">
+                    <a href="#projects"
+                        class="inline-flex items-center justify-center w-14 h-14 rounded-full border border-white/30 hover:border-white/60 text-white transition-all duration-300 hover:scale-110 group">
                         <i class="fas fa-arrow-down text-sm group-hover:translate-y-1 transition-transform"></i>
                     </a>
                 </div>
             </div>
 
             <!-- Scroll Indicator -->
-            <div class="absolute bottom-8 right-8 z-30 text-neutral-500 text-[10px] tracking-widest uppercase opacity-0 animate-fade-in" style="animation-delay: 1s;" data-i18n="hero_scroll">
+            <div class="absolute bottom-8 right-8 z-30 text-neutral-500 text-[10px] tracking-widest uppercase opacity-0 animate-fade-in"
+                style="animation-delay: 1s" data-i18n="hero_scroll">
                 Scroll
             </div>
         </section>
 
         <!-- About & Education Section -->
-        <section id="about" class="py-32 bg-white dark:bg-neutral-950 border-t border-neutral-100 dark:border-neutral-900">
+        <section id="about"
+            class="py-32 bg-white dark:bg-neutral-950 border-t border-neutral-100 dark:border-neutral-900">
             <div class="max-w-6xl mx-auto px-6">
                 <div class="grid md:grid-cols-2 gap-16 items-start">
                     <!-- About Text -->
                     <div class="reveal">
-                        <h2 class="font-display text-3xl font-semibold mb-8" data-i18n="about_title">About Me</h2>
-                        <div class="space-y-6 text-neutral-600 dark:text-neutral-400 leading-relaxed text-lg font-light">
+                        <h2 class="font-display text-3xl font-semibold mb-8" data-i18n="about_title">
+                            About Me
+                        </h2>
+                        <div
+                            class="space-y-6 text-neutral-600 dark:text-neutral-400 leading-relaxed text-lg font-light">
                             <p data-i18n="about_p1">
-                                I am a creative developer with a passion for building digital products that are not only functional but also aesthetically pleasing. I believe in the power of minimalism and clarity in design.
+                                I am a creative developer with a passion for building digital
+                                products that are not only functional but also aesthetically
+                                pleasing. I believe in the power of minimalism and clarity in
+                                design.
                             </p>
                             <p data-i18n="about_p2">
-                                Currently studying Software Engineering, I bridge the gap between engineering and design, ensuring every pixel serves a purpose.
+                                Currently studying Software Engineering, I bridge the gap
+                                between engineering and design, ensuring every pixel serves a
+                                purpose.
                             </p>
                         </div>
                     </div>
 
                     <!-- Education -->
                     <div class="reveal delay-200">
-                        <h2 class="font-display text-3xl font-semibold mb-8" data-i18n="edu_title">Education</h2>
+                        <h2 class="font-display text-3xl font-semibold mb-8" data-i18n="edu_title">
+                            Education
+                        </h2>
                         <div class="space-y-8 border-l border-neutral-200 dark:border-neutral-800 pl-8 relative">
                             <!-- Item 1 -->
                             <div class="relative">
-                                <span class="absolute -left-[37px] top-1.5 w-4 h-4 rounded-full bg-neutral-100 dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700"></span>
-                                <span class="text-xs font-medium text-accent tracking-wider uppercase mb-1 block">2024 — Present</span>
-                                <h3 class="text-lg font-medium text-neutral-900 dark:text-white">Politeknik Elektronika Negeri Surabaya</h3>
-                                <p class="text-neutral-500 dark:text-neutral-400 text-sm mt-1" data-i18n="edu_uni_major">Informatics / Software Engineering</p>
+                                <span
+                                    class="absolute -left-[37px] top-1.5 w-4 h-4 rounded-full bg-neutral-100 dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700"></span>
+                                <span class="text-xs font-medium text-accent tracking-wider uppercase mb-1 block">2024 —
+                                    Present</span>
+                                <h3 class="text-lg font-medium text-neutral-900 dark:text-white">
+                                    Politeknik Elektronika Negeri Surabaya
+                                </h3>
+                                <p class="text-neutral-500 dark:text-neutral-400 text-sm mt-1"
+                                    data-i18n="edu_uni_major">
+                                    Informatics / Software Engineering
+                                </p>
                             </div>
                             <!-- Item 2 -->
                             <div class="relative">
-                                <span class="absolute -left-[37px] top-1.5 w-4 h-4 rounded-full bg-neutral-100 dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700"></span>
-                                <span class="text-xs font-medium text-neutral-400 tracking-wider uppercase mb-1 block">2019 — 2022</span>
-                                <h3 class="text-lg font-medium text-neutral-900 dark:text-white">SMK 7 Samarinda</h3>
-                                <p class="text-neutral-500 dark:text-neutral-400 text-sm mt-1" data-i18n="edu_hs_major">Software Engineering</p>
+                                <span
+                                    class="absolute -left-[37px] top-1.5 w-4 h-4 rounded-full bg-neutral-100 dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700"></span>
+                                <span
+                                    class="text-xs font-medium text-neutral-400 tracking-wider uppercase mb-1 block">2019
+                                    — 2022</span>
+                                <h3 class="text-lg font-medium text-neutral-900 dark:text-white">
+                                    SMK 7 Samarinda
+                                </h3>
+                                <p class="text-neutral-500 dark:text-neutral-400 text-sm mt-1" data-i18n="edu_hs_major">
+                                    Software Engineering
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -349,36 +452,58 @@
         <section id="experience" class="py-32 bg-neutral-50 dark:bg-neutral-900/50">
             <div class="max-w-4xl mx-auto px-6">
                 <div class="text-center mb-16 reveal">
-                    <h2 class="font-display text-3xl font-semibold mb-4" data-i18n="exp_title">Experience</h2>
-                    <p class="text-neutral-500 dark:text-neutral-400 font-light" data-i18n="exp_subtitle">My professional journey and community involvement.</p>
+                    <h2 class="font-display text-3xl font-semibold mb-4" data-i18n="exp_title">
+                        Experience
+                    </h2>
+                    <p class="text-neutral-500 dark:text-neutral-400 font-light" data-i18n="exp_subtitle">
+                        My professional journey and community involvement.
+                    </p>
                 </div>
 
                 <div class="space-y-6">
                     <!-- Exp Card 1 -->
-                    <div class="group bg-white dark:bg-neutral-900 p-8 rounded-2xl border border-neutral-100 dark:border-neutral-800 hover:border-accent/30 dark:hover:border-accent/30 transition-all duration-500 hover:shadow-lg hover:shadow-accent/5 reveal">
+                    <div
+                        class="group bg-white dark:bg-neutral-900 p-8 rounded-2xl border border-neutral-100 dark:border-neutral-800 hover:border-accent/30 dark:hover:border-accent/30 transition-all duration-500 hover:shadow-lg hover:shadow-accent/5 reveal">
                         <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
                             <div>
-                                <h3 class="text-xl font-medium text-neutral-900 dark:text-white" data-i18n="exp1_role">Freelance Web Developer</h3>
-                                <p class="text-neutral-500 dark:text-neutral-400 text-sm">Self-Employed</p>
+                                <h3 class="text-xl font-medium text-neutral-900 dark:text-white" data-i18n="exp1_role">
+                                    Freelance Web Developer
+                                </h3>
+                                <p class="text-neutral-500 dark:text-neutral-400 text-sm">
+                                    Self-Employed
+                                </p>
                             </div>
-                            <span class="mt-2 md:mt-0 px-3 py-1 bg-neutral-50 dark:bg-neutral-800 rounded-full text-xs text-neutral-500 dark:text-neutral-400 border border-neutral-100 dark:border-neutral-700">2023 — Present</span>
+                            <span
+                                class="mt-2 md:mt-0 px-3 py-1 bg-neutral-50 dark:bg-neutral-800 rounded-full text-xs text-neutral-500 dark:text-neutral-400 border border-neutral-100 dark:border-neutral-700">2023
+                                — Present</span>
                         </div>
-                        <p class="text-neutral-600 dark:text-neutral-400 font-light leading-relaxed" data-i18n="exp1_desc">
-                            Developing custom websites for small businesses, focusing on performance, SEO, and responsive design.
+                        <p class="text-neutral-600 dark:text-neutral-400 font-light leading-relaxed"
+                            data-i18n="exp1_desc">
+                            Developing custom websites for small businesses, focusing on
+                            performance, SEO, and responsive design.
                         </p>
                     </div>
 
                     <!-- Exp Card 2 -->
-                    <div class="group bg-white dark:bg-neutral-900 p-8 rounded-2xl border border-neutral-100 dark:border-neutral-800 hover:border-accent/30 dark:hover:border-accent/30 transition-all duration-500 hover:shadow-lg hover:shadow-accent/5 reveal">
+                    <div
+                        class="group bg-white dark:bg-neutral-900 p-8 rounded-2xl border border-neutral-100 dark:border-neutral-800 hover:border-accent/30 dark:hover:border-accent/30 transition-all duration-500 hover:shadow-lg hover:shadow-accent/5 reveal">
                         <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
                             <div>
-                                <h3 class="text-xl font-medium text-neutral-900 dark:text-white" data-i18n="exp2_role">Active Member</h3>
-                                <p class="text-neutral-500 dark:text-neutral-400 text-sm">IT Community / UKM</p>
+                                <h3 class="text-xl font-medium text-neutral-900 dark:text-white" data-i18n="exp2_role">
+                                    Active Member
+                                </h3>
+                                <p class="text-neutral-500 dark:text-neutral-400 text-sm">
+                                    IT Community / UKM
+                                </p>
                             </div>
-                            <span class="mt-2 md:mt-0 px-3 py-1 bg-neutral-50 dark:bg-neutral-800 rounded-full text-xs text-neutral-500 dark:text-neutral-400 border border-neutral-100 dark:border-neutral-700">2024 — Present</span>
+                            <span
+                                class="mt-2 md:mt-0 px-3 py-1 bg-neutral-50 dark:bg-neutral-800 rounded-full text-xs text-neutral-500 dark:text-neutral-400 border border-neutral-100 dark:border-neutral-700">2024
+                                — Present</span>
                         </div>
-                        <p class="text-neutral-600 dark:text-neutral-400 font-light leading-relaxed" data-i18n="exp2_desc">
-                            Participating in workshops, hackathons, and collaborative projects to enhance technical skills and network.
+                        <p class="text-neutral-600 dark:text-neutral-400 font-light leading-relaxed"
+                            data-i18n="exp2_desc">
+                            Participating in workshops, hackathons, and collaborative
+                            projects to enhance technical skills and network.
                         </p>
                     </div>
                 </div>
@@ -386,87 +511,142 @@
         </section>
 
         <!-- Tech Stack -->
-        <section class="py-24 bg-white dark:bg-neutral-950 border-y border-neutral-100 dark:border-neutral-900 overflow-hidden">
+        <section
+            class="py-24 bg-white dark:bg-neutral-950 border-y border-neutral-100 dark:border-neutral-900 overflow-hidden">
             <div class="max-w-6xl mx-auto px-6">
-                <h2 class="font-display text-2xl font-semibold mb-12 text-center" data-i18n="stack_title">Technologies</h2>
-                
+                <h2 class="font-display text-2xl font-semibold mb-12 text-center" data-i18n="stack_title">
+                    Technologies
+                </h2>
+
                 <!-- Infinite Slider -->
                 <div class="relative">
                     <div class="flex animate-slide-infinite">
                         <!-- First Set -->
                         <div class="flex gap-12 px-6 shrink-0">
-                            <div class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
-                                <i class="fab fa-html5 text-4xl text-neutral-400 group-hover:text-orange-500 transition-colors duration-300"></i>
-                                <span class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">HTML5</span>
+                            <div
+                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
+                                <i
+                                    class="fab fa-html5 text-4xl text-neutral-400 group-hover:text-orange-500 transition-colors duration-300"></i>
+                                <span
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">HTML5</span>
                             </div>
-                            <div class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
-                                <i class="fab fa-css3-alt text-4xl text-neutral-400 group-hover:text-blue-500 transition-colors duration-300"></i>
-                                <span class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">CSS3</span>
+                            <div
+                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
+                                <i
+                                    class="fab fa-css3-alt text-4xl text-neutral-400 group-hover:text-blue-500 transition-colors duration-300"></i>
+                                <span
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">CSS3</span>
                             </div>
-                            <div class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
-                                <i class="fab fa-js text-4xl text-neutral-400 group-hover:text-yellow-400 transition-colors duration-300"></i>
-                                <span class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">JavaScript</span>
+                            <div
+                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
+                                <i
+                                    class="fab fa-js text-4xl text-neutral-400 group-hover:text-yellow-400 transition-colors duration-300"></i>
+                                <span
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">JavaScript</span>
                             </div>
-                            <div class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
-                                <i class="fab fa-react text-4xl text-neutral-400 group-hover:text-cyan-400 transition-colors duration-300"></i>
-                                <span class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">React</span>
+                            <div
+                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
+                                <i
+                                    class="fab fa-react text-4xl text-neutral-400 group-hover:text-cyan-400 transition-colors duration-300"></i>
+                                <span
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">React</span>
                             </div>
-                            <div class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
-                                <i class="fas fa-wind text-4xl text-neutral-400 group-hover:text-cyan-500 transition-colors duration-300"></i>
-                                <span class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Tailwind</span>
+                            <div
+                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
+                                <i
+                                    class="fas fa-wind text-4xl text-neutral-400 group-hover:text-cyan-500 transition-colors duration-300"></i>
+                                <span
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Tailwind</span>
                             </div>
-                            <div class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
-                                <i class="fab fa-git-alt text-4xl text-neutral-400 group-hover:text-red-500 transition-colors duration-300"></i>
-                                <span class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Git</span>
+                            <div
+                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
+                                <i
+                                    class="fab fa-git-alt text-4xl text-neutral-400 group-hover:text-red-500 transition-colors duration-300"></i>
+                                <span
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Git</span>
                             </div>
-                            <div class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
-                                <i class="fab fa-node text-4xl text-neutral-400 group-hover:text-green-600 transition-colors duration-300"></i>
-                                <span class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Node.js</span>
+                            <div
+                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
+                                <i
+                                    class="fab fa-node text-4xl text-neutral-400 group-hover:text-green-600 transition-colors duration-300"></i>
+                                <span
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Node.js</span>
                             </div>
-                            <div class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
-                                <i class="fab fa-figma text-4xl text-neutral-400 group-hover:text-purple-500 transition-colors duration-300"></i>
-                                <span class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Figma</span>
+                            <div
+                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
+                                <i
+                                    class="fab fa-figma text-4xl text-neutral-400 group-hover:text-purple-500 transition-colors duration-300"></i>
+                                <span
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Figma</span>
                             </div>
                         </div>
                         <!-- Duplicate Set for seamless loop -->
                         <div class="flex gap-12 px-6 shrink-0">
-                            <div class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
-                                <i class="fab fa-html5 text-4xl text-neutral-400 group-hover:text-orange-500 transition-colors duration-300"></i>
-                                <span class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">HTML5</span>
+                            <div
+                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
+                                <i
+                                    class="fab fa-html5 text-4xl text-neutral-400 group-hover:text-orange-500 transition-colors duration-300"></i>
+                                <span
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">HTML5</span>
                             </div>
-                            <div class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
-                                <i class="fab fa-css3-alt text-4xl text-neutral-400 group-hover:text-blue-500 transition-colors duration-300"></i>
-                                <span class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">CSS3</span>
+                            <div
+                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
+                                <i
+                                    class="fab fa-css3-alt text-4xl text-neutral-400 group-hover:text-blue-500 transition-colors duration-300"></i>
+                                <span
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">CSS3</span>
                             </div>
-                            <div class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
-                                <i class="fab fa-js text-4xl text-neutral-400 group-hover:text-yellow-400 transition-colors duration-300"></i>
-                                <span class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">JavaScript</span>
+                            <div
+                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
+                                <i
+                                    class="fab fa-js text-4xl text-neutral-400 group-hover:text-yellow-400 transition-colors duration-300"></i>
+                                <span
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">JavaScript</span>
                             </div>
-                            <div class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
-                                <i class="fab fa-react text-4xl text-neutral-400 group-hover:text-cyan-400 transition-colors duration-300"></i>
-                                <span class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">React</span>
+                            <div
+                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
+                                <i
+                                    class="fab fa-react text-4xl text-neutral-400 group-hover:text-cyan-400 transition-colors duration-300"></i>
+                                <span
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">React</span>
                             </div>
-                            <div class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
-                                <i class="fas fa-wind text-4xl text-neutral-400 group-hover:text-cyan-500 transition-colors duration-300"></i>
-                                <span class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Tailwind</span>
+                            <div
+                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
+                                <i
+                                    class="fas fa-wind text-4xl text-neutral-400 group-hover:text-cyan-500 transition-colors duration-300"></i>
+                                <span
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Tailwind</span>
                             </div>
-                            <div class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
-                                <i class="fab fa-git-alt text-4xl text-neutral-400 group-hover:text-red-500 transition-colors duration-300"></i>
-                                <span class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Git</span>
+                            <div
+                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
+                                <i
+                                    class="fab fa-git-alt text-4xl text-neutral-400 group-hover:text-red-500 transition-colors duration-300"></i>
+                                <span
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Git</span>
                             </div>
-                            <div class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
-                                <i class="fab fa-node text-4xl text-neutral-400 group-hover:text-green-600 transition-colors duration-300"></i>
-                                <span class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Node.js</span>
+                            <div
+                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
+                                <i
+                                    class="fab fa-node text-4xl text-neutral-400 group-hover:text-green-600 transition-colors duration-300"></i>
+                                <span
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Node.js</span>
                             </div>
-                            <div class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
-                                <i class="fab fa-figma text-4xl text-neutral-400 group-hover:text-purple-500 transition-colors duration-300"></i>
-                                <span class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Figma</span>
+                            <div
+                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
+                                <i
+                                    class="fab fa-figma text-4xl text-neutral-400 group-hover:text-purple-500 transition-colors duration-300"></i>
+                                <span
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Figma</span>
                             </div>
                         </div>
                     </div>
                     <!-- Gradient Overlays for fade effect -->
-                    <div class="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-white dark:from-neutral-950 to-transparent pointer-events-none"></div>
-                    <div class="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-white dark:from-neutral-950 to-transparent pointer-events-none"></div>
+                    <div
+                        class="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-white dark:from-neutral-950 to-transparent pointer-events-none">
+                    </div>
+                    <div
+                        class="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-white dark:from-neutral-950 to-transparent pointer-events-none">
+                    </div>
                 </div>
             </div>
         </section>
@@ -475,88 +655,128 @@
         <section id="projects" class="py-32 bg-neutral-50 dark:bg-neutral-900/30">
             <div class="max-w-6xl mx-auto px-6">
                 <div class="text-center mb-16 reveal">
-                    <h2 class="font-display text-3xl font-semibold mb-2" data-i18n="projects_title">Selected Work</h2>
-                    <p class="text-neutral-500 dark:text-neutral-400 font-light" data-i18n="projects_subtitle">A collection of projects I've crafted.</p>
+                    <h2 class="font-display text-3xl font-semibold mb-2" data-i18n="projects_title">
+                        Selected Work
+                    </h2>
+                    <p class="text-neutral-500 dark:text-neutral-400 font-light" data-i18n="projects_subtitle">
+                        A collection of projects I've crafted.
+                    </p>
                 </div>
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Project 1 -->
-                    <article class="tilt-card group bg-white dark:bg-neutral-900 rounded-2xl overflow-hidden border border-neutral-100 dark:border-neutral-800 hover:shadow-xl hover:shadow-neutral-200/50 dark:hover:shadow-none transition-all duration-500 reveal">
+                    <article
+                        class="tilt-card group bg-white dark:bg-neutral-900 rounded-2xl overflow-hidden border border-neutral-100 dark:border-neutral-800 hover:shadow-xl hover:shadow-neutral-200/50 dark:hover:shadow-none transition-all duration-500 reveal">
                         <div class="h-56 bg-neutral-100 dark:bg-neutral-800 relative overflow-hidden">
-                            <div class="absolute inset-0 bg-gradient-to-tr from-violet-100 to-neutral-50 dark:from-neutral-800 dark:to-neutral-900 opacity-80 group-hover:scale-105 transition-transform duration-700"></div>
-                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-tr from-violet-100 to-neutral-50 dark:from-neutral-800 dark:to-neutral-900 opacity-80 group-hover:scale-105 transition-transform duration-700">
+                            </div>
+                            <div
+                                class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                 <div class="flex gap-3">
-                                    <a href="#" class="w-10 h-10 bg-white dark:bg-neutral-800 rounded-full flex items-center justify-center text-neutral-900 dark:text-white shadow-lg hover:scale-110 transition-transform">
+                                    <a href="#"
+                                        class="w-10 h-10 bg-white dark:bg-neutral-800 rounded-full flex items-center justify-center text-neutral-900 dark:text-white shadow-lg hover:scale-110 transition-transform">
                                         <i class="fas fa-external-link-alt text-sm"></i>
                                     </a>
-                                    <a href="#" class="w-10 h-10 bg-white dark:bg-neutral-800 rounded-full flex items-center justify-center text-neutral-900 dark:text-white shadow-lg hover:scale-110 transition-transform">
+                                    <a href="#"
+                                        class="w-10 h-10 bg-white dark:bg-neutral-800 rounded-full flex items-center justify-center text-neutral-900 dark:text-white shadow-lg hover:scale-110 transition-transform">
                                         <i class="fab fa-github text-sm"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="p-6">
-                            <h3 class="font-display text-lg font-semibold mb-2 text-neutral-900 dark:text-white">E-Commerce Minimal</h3>
-                            <p class="text-sm text-neutral-500 dark:text-neutral-400 font-light mb-4 line-clamp-2" data-i18n="proj1_desc">
-                                A clean, distraction-free shopping experience focusing on product photography and typography.
+                            <h3 class="font-display text-lg font-semibold mb-2 text-neutral-900 dark:text-white">
+                                E-Commerce Minimal
+                            </h3>
+                            <p class="text-sm text-neutral-500 dark:text-neutral-400 font-light mb-4 line-clamp-2"
+                                data-i18n="proj1_desc">
+                                A clean, distraction-free shopping experience focusing on
+                                product photography and typography.
                             </p>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-2 py-1 bg-neutral-50 dark:bg-neutral-800 text-[10px] uppercase tracking-wider font-medium text-neutral-500 rounded-md">React</span>
-                                <span class="px-2 py-1 bg-neutral-50 dark:bg-neutral-800 text-[10px] uppercase tracking-wider font-medium text-neutral-500 rounded-md">Tailwind</span>
+                                <span
+                                    class="px-2 py-1 bg-neutral-50 dark:bg-neutral-800 text-[10px] uppercase tracking-wider font-medium text-neutral-500 rounded-md">React</span>
+                                <span
+                                    class="px-2 py-1 bg-neutral-50 dark:bg-neutral-800 text-[10px] uppercase tracking-wider font-medium text-neutral-500 rounded-md">Tailwind</span>
                             </div>
                         </div>
                     </article>
 
                     <!-- Project 2 -->
-                    <article class="tilt-card group bg-white dark:bg-neutral-900 rounded-2xl overflow-hidden border border-neutral-100 dark:border-neutral-800 hover:shadow-xl hover:shadow-neutral-200/50 dark:hover:shadow-none transition-all duration-500 reveal delay-100">
+                    <article
+                        class="tilt-card group bg-white dark:bg-neutral-900 rounded-2xl overflow-hidden border border-neutral-100 dark:border-neutral-800 hover:shadow-xl hover:shadow-neutral-200/50 dark:hover:shadow-none transition-all duration-500 reveal delay-100">
                         <div class="h-56 bg-neutral-100 dark:bg-neutral-800 relative overflow-hidden">
-                            <div class="absolute inset-0 bg-gradient-to-tr from-blue-100 to-neutral-50 dark:from-neutral-800 dark:to-neutral-900 opacity-80 group-hover:scale-105 transition-transform duration-700"></div>
-                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-tr from-blue-100 to-neutral-50 dark:from-neutral-800 dark:to-neutral-900 opacity-80 group-hover:scale-105 transition-transform duration-700">
+                            </div>
+                            <div
+                                class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                 <div class="flex gap-3">
-                                    <a href="#" class="w-10 h-10 bg-white dark:bg-neutral-800 rounded-full flex items-center justify-center text-neutral-900 dark:text-white shadow-lg hover:scale-110 transition-transform">
+                                    <a href="#"
+                                        class="w-10 h-10 bg-white dark:bg-neutral-800 rounded-full flex items-center justify-center text-neutral-900 dark:text-white shadow-lg hover:scale-110 transition-transform">
                                         <i class="fas fa-external-link-alt text-sm"></i>
                                     </a>
-                                    <a href="#" class="w-10 h-10 bg-white dark:bg-neutral-800 rounded-full flex items-center justify-center text-neutral-900 dark:text-white shadow-lg hover:scale-110 transition-transform">
+                                    <a href="#"
+                                        class="w-10 h-10 bg-white dark:bg-neutral-800 rounded-full flex items-center justify-center text-neutral-900 dark:text-white shadow-lg hover:scale-110 transition-transform">
                                         <i class="fab fa-github text-sm"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="p-6">
-                            <h3 class="font-display text-lg font-semibold mb-2 text-neutral-900 dark:text-white">Task Flow</h3>
-                            <p class="text-sm text-neutral-500 dark:text-neutral-400 font-light mb-4 line-clamp-2" data-i18n="proj2_desc">
-                                Productivity application with drag-and-drop functionality and calm color schemes.
+                            <h3 class="font-display text-lg font-semibold mb-2 text-neutral-900 dark:text-white">
+                                Task Flow
+                            </h3>
+                            <p class="text-sm text-neutral-500 dark:text-neutral-400 font-light mb-4 line-clamp-2"
+                                data-i18n="proj2_desc">
+                                Productivity application with drag-and-drop functionality and
+                                calm color schemes.
                             </p>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-2 py-1 bg-neutral-50 dark:bg-neutral-800 text-[10px] uppercase tracking-wider font-medium text-neutral-500 rounded-md">Vue</span>
-                                <span class="px-2 py-1 bg-neutral-50 dark:bg-neutral-800 text-[10px] uppercase tracking-wider font-medium text-neutral-500 rounded-md">Firebase</span>
+                                <span
+                                    class="px-2 py-1 bg-neutral-50 dark:bg-neutral-800 text-[10px] uppercase tracking-wider font-medium text-neutral-500 rounded-md">Vue</span>
+                                <span
+                                    class="px-2 py-1 bg-neutral-50 dark:bg-neutral-800 text-[10px] uppercase tracking-wider font-medium text-neutral-500 rounded-md">Firebase</span>
                             </div>
                         </div>
                     </article>
 
                     <!-- Project 3 -->
-                    <article class="tilt-card group bg-white dark:bg-neutral-900 rounded-2xl overflow-hidden border border-neutral-100 dark:border-neutral-800 hover:shadow-xl hover:shadow-neutral-200/50 dark:hover:shadow-none transition-all duration-500 reveal delay-200">
+                    <article
+                        class="tilt-card group bg-white dark:bg-neutral-900 rounded-2xl overflow-hidden border border-neutral-100 dark:border-neutral-800 hover:shadow-xl hover:shadow-neutral-200/50 dark:hover:shadow-none transition-all duration-500 reveal delay-200">
                         <div class="h-56 bg-neutral-100 dark:bg-neutral-800 relative overflow-hidden">
-                            <div class="absolute inset-0 bg-gradient-to-tr from-emerald-100 to-neutral-50 dark:from-neutral-800 dark:to-neutral-900 opacity-80 group-hover:scale-105 transition-transform duration-700"></div>
-                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-tr from-emerald-100 to-neutral-50 dark:from-neutral-800 dark:to-neutral-900 opacity-80 group-hover:scale-105 transition-transform duration-700">
+                            </div>
+                            <div
+                                class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                 <div class="flex gap-3">
-                                    <a href="#" class="w-10 h-10 bg-white dark:bg-neutral-800 rounded-full flex items-center justify-center text-neutral-900 dark:text-white shadow-lg hover:scale-110 transition-transform">
+                                    <a href="#"
+                                        class="w-10 h-10 bg-white dark:bg-neutral-800 rounded-full flex items-center justify-center text-neutral-900 dark:text-white shadow-lg hover:scale-110 transition-transform">
                                         <i class="fas fa-external-link-alt text-sm"></i>
                                     </a>
-                                    <a href="#" class="w-10 h-10 bg-white dark:bg-neutral-800 rounded-full flex items-center justify-center text-neutral-900 dark:text-white shadow-lg hover:scale-110 transition-transform">
+                                    <a href="#"
+                                        class="w-10 h-10 bg-white dark:bg-neutral-800 rounded-full flex items-center justify-center text-neutral-900 dark:text-white shadow-lg hover:scale-110 transition-transform">
                                         <i class="fab fa-github text-sm"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="p-6">
-                            <h3 class="font-display text-lg font-semibold mb-2 text-neutral-900 dark:text-white">Weather Zen</h3>
-                            <p class="text-sm text-neutral-500 dark:text-neutral-400 font-light mb-4 line-clamp-2" data-i18n="proj3_desc">
-                                Minimalist weather dashboard providing essential data with beautiful atmospheric gradients.
+                            <h3 class="font-display text-lg font-semibold mb-2 text-neutral-900 dark:text-white">
+                                Weather Zen
+                            </h3>
+                            <p class="text-sm text-neutral-500 dark:text-neutral-400 font-light mb-4 line-clamp-2"
+                                data-i18n="proj3_desc">
+                                Minimalist weather dashboard providing essential data with
+                                beautiful atmospheric gradients.
                             </p>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-2 py-1 bg-neutral-50 dark:bg-neutral-800 text-[10px] uppercase tracking-wider font-medium text-neutral-500 rounded-md">JS</span>
-                                <span class="px-2 py-1 bg-neutral-50 dark:bg-neutral-800 text-[10px] uppercase tracking-wider font-medium text-neutral-500 rounded-md">API</span>
+                                <span
+                                    class="px-2 py-1 bg-neutral-50 dark:bg-neutral-800 text-[10px] uppercase tracking-wider font-medium text-neutral-500 rounded-md">JS</span>
+                                <span
+                                    class="px-2 py-1 bg-neutral-50 dark:bg-neutral-800 text-[10px] uppercase tracking-wider font-medium text-neutral-500 rounded-md">API</span>
                             </div>
                         </div>
                     </article>
@@ -564,61 +784,113 @@
 
                 <!-- View All Archives -->
                 <div class="text-center mt-12 reveal">
-                    <a href="#" class="inline-block text-sm font-medium text-accent hover:text-accent-dark transition-colors">
-                        <span data-i18n="view_all">View All Archives</span> <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                    <a href="#"
+                        class="inline-block text-sm font-medium text-accent hover:text-accent-dark transition-colors">
+                        <span data-i18n="view_all">View All Archives</span>
+                        <i class="fas fa-arrow-right ml-1 text-xs"></i>
                     </a>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-32 bg-white dark:bg-neutral-950 border-t border-neutral-100 dark:border-neutral-900">
+        <section id="contact"
+            class="py-32 bg-white dark:bg-neutral-950 border-t border-neutral-100 dark:border-neutral-900">
             <div class="max-w-2xl mx-auto px-6">
                 <div class="text-center mb-12 reveal">
-                    <h2 class="font-display text-3xl font-semibold mb-4" data-i18n="contact_title">Get in Touch</h2>
-                    <p class="text-neutral-500 dark:text-neutral-400 font-light" data-i18n="contact_subtitle">Have a project in mind? Let's create something beautiful.</p>
+                    <h2 class="font-display text-3xl font-semibold mb-4" data-i18n="contact_title">
+                        Get in Touch
+                    </h2>
+                    <p class="text-neutral-500 dark:text-neutral-400 font-light" data-i18n="contact_subtitle">
+                        Have a project in mind? Let's create something beautiful.
+                    </p>
                 </div>
 
-                <form class="space-y-8 reveal delay-100">
+                <form action="https://api.web3forms.com/submit" method="POST" class="space-y-8 reveal delay-100">
+                    <input type="hidden" name="access_key" value="32fdbfb4-a707-4c84-a6bf-7e0071aafa09" />
                     <div class="input-group relative">
-                        <input type="text" id="name" class="peer w-full py-3 bg-transparent border-b border-neutral-200 dark:border-neutral-800 text-neutral-900 dark:text-white focus:outline-none transition-colors" placeholder=" " required>
-                        <label for="name" class="absolute left-0 top-3 text-neutral-400 text-sm transition-all peer-focus:-top-5 peer-focus:text-xs peer-not-placeholder-shown:-top-5 peer-not-placeholder-shown:text-xs cursor-text" data-i18n="form_name">Name</label>
-                        <div class="input-underline absolute bottom-0 left-0 h-[1px] bg-transparent transition-all duration-300 w-0"></div>
-                    </div>
-                    
-                    <div class="input-group relative">
-                        <input type="email" id="email" class="peer w-full py-3 bg-transparent border-b border-neutral-200 dark:border-neutral-800 text-neutral-900 dark:text-white focus:outline-none transition-colors" placeholder=" " required>
-                        <label for="email" class="absolute left-0 top-3 text-neutral-400 text-sm transition-all peer-focus:-top-5 peer-focus:text-xs peer-not-placeholder-shown:-top-5 peer-not-placeholder-shown:text-xs cursor-text" data-i18n="form_email">Email</label>
-                        <div class="input-underline absolute bottom-0 left-0 h-[1px] bg-transparent transition-all duration-300 w-0"></div>
+                        <input type="text" id="name" name="name"
+                            class="peer w-full py-3 bg-transparent border-b border-neutral-200 dark:border-neutral-800 text-neutral-900 dark:text-white focus:outline-none focus:ring-0 transition-colors"
+                            placeholder=" " required />
+
+                        <label for="name" class="absolute left-0 -top-5 text-xs text-neutral-400 transition-all 
+               peer-placeholder-shown:top-3 peer-placeholder-shown:text-sm 
+               peer-focus:-top-5 peer-focus:text-xs 
+               cursor-text">
+                            <span data-i18n="form_name">Name</span>
+                        </label>
+
+                        <div
+                            class="input-underline absolute bottom-0 left-0 h-[1px] bg-transparent transition-all duration-300 w-0 peer-focus:w-full">
+                        </div>
                     </div>
 
                     <div class="input-group relative">
-                        <textarea id="message" rows="4" class="peer w-full py-3 bg-transparent border-b border-neutral-200 dark:border-neutral-800 text-neutral-900 dark:text-white focus:outline-none transition-colors resize-none" placeholder=" " required></textarea>
-                        <label for="message" class="absolute left-0 top-3 text-neutral-400 text-sm transition-all peer-focus:-top-5 peer-focus:text-xs peer-not-placeholder-shown:-top-5 peer-not-placeholder-shown:text-xs cursor-text" data-i18n="form_message">Message</label>
-                        <div class="input-underline absolute bottom-0 left-0 h-[1px] bg-transparent transition-all duration-300 w-0"></div>
+                        <input type="email" id="email" name="email"
+                            class="peer w-full py-3 bg-transparent border-b border-neutral-200 dark:border-neutral-800 text-neutral-900 dark:text-white focus:outline-none focus:ring-0 transition-colors"
+                            placeholder=" " required />
+
+                        <label for="email" class="absolute left-0 -top-5 text-xs text-neutral-400 transition-all 
+               peer-placeholder-shown:top-3 peer-placeholder-shown:text-sm 
+               peer-focus:-top-5 peer-focus:text-xs 
+               cursor-text">
+                            <span data-i18n="form_email">Email</span>
+                        </label>
+
+                        <div
+                            class="input-underline absolute bottom-0 left-0 h-[1px] bg-transparent transition-all duration-300 w-0 peer-focus:w-full">
+                        </div>
+                    </div>
+
+                    <div class="input-group relative">
+                        <textarea id="message" name="message" rows="4"
+                            class="peer w-full py-3 bg-transparent border-b border-neutral-200 dark:border-neutral-800 text-neutral-900 dark:text-white focus:outline-none focus:ring-0 transition-colors resize-none"
+                            placeholder=" " required></textarea>
+
+                        <label for="message" class="absolute left-0 -top-5 text-xs text-neutral-400 transition-all 
+               peer-placeholder-shown:top-3 peer-placeholder-shown:text-sm 
+               peer-focus:-top-5 peer-focus:text-xs 
+               cursor-text">
+                            <span data-i18n="form_message">Message</span>
+                        </label>
+
+                        <div
+                            class="input-underline absolute bottom-0 left-0 h-[1px] bg-transparent transition-all duration-300 w-0 peer-focus:w-full">
+                        </div>
                     </div>
 
                     <div class="pt-4 text-center">
-                        <button type="submit" class="px-10 py-3 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 rounded-full font-medium text-sm hover:opacity-90 transition-opacity shadow-lg shadow-neutral-200/50 dark:shadow-none">
+                        <button type="submit"
+                            class="px-10 py-3 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 rounded-full font-medium text-sm hover:opacity-90 transition-opacity shadow-lg shadow-neutral-200/50 dark:shadow-none">
                             <span data-i18n="form_submit">Send Message</span>
                         </button>
                     </div>
                 </form>
 
                 <div class="flex justify-center gap-8 mt-16">
-                    <a href="https://github.com/AdniAlts" class="text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors"><i class="fab fa-github text-xl"></i></a>
-                    <a href="https://www.linkedin.com/in/abubakar-adni/" class="text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
-                    <a href="https://www.instagram.com/adnialatas_/" class="text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors"><i class="fab fa-instagram text-xl"></i></a>
-                    <a href="https://mail.google.com/mail/u/0/?to=abubakaradni16@gmail.com&fs=1&tf=cm" class="text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors"><i class="fas fa-envelope text-xl"></i></a>
+                    <a href="https://github.com/AdniAlts"
+                        class="text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors"><i
+                            class="fab fa-github text-xl"></i></a>
+                    <a href="https://www.linkedin.com/in/abubakar-adni/"
+                        class="text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors"><i
+                            class="fab fa-linkedin text-xl"></i></a>
+                    <a href="https://www.instagram.com/adnialatas_/"
+                        class="text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors"><i
+                            class="fab fa-instagram text-xl"></i></a>
+                    <a href="https://mail.google.com/mail/u/0/?to=abubakaradni16@gmail.com&fs=1&tf=cm"
+                        class="text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors"><i
+                            class="fas fa-envelope text-xl"></i></a>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="py-8 bg-neutral-50 dark:bg-neutral-950 border-t border-neutral-200 dark:border-neutral-900 text-center">
+    <footer
+        class="py-8 bg-neutral-50 dark:bg-neutral-950 border-t border-neutral-200 dark:border-neutral-900 text-center">
         <p class="text-xs text-neutral-400 font-medium tracking-wide">
-            &copy; 2025 Abubakar Adni. <span data-i18n="footer_rights">All rights reserved.</span>
+            &copy; 2025 Abubakar Adni.
+            <span data-i18n="footer_rights">All rights reserved.</span>
         </p>
     </footer>
 
@@ -626,164 +898,200 @@
         // --- Translations ---
         const translations = {
             en: {
-                nav_about: 'About',
-                nav_experience: 'Experience',
-                nav_projects: 'Projects',
-                nav_contact: 'Contact',
-                hero_scroll: 'Scroll',
-                about_title: 'About Me',
-                about_p1: 'I am a creative developer with a passion for building digital products that are not only functional but also aesthetically pleasing. I believe in the power of minimalism and clarity in design.',
-                about_p2: 'Currently studying Software Engineering, I bridge the gap between engineering and design, ensuring every pixel serves a purpose.',
-                edu_title: 'Education',
-                edu_uni_major: 'Informatics / Software Engineering',
-                edu_hs_major: 'Software Engineering',
-                exp_title: 'Experience',
-                exp_subtitle: 'My professional journey and community involvement.',
-                exp1_role: 'Freelance Web Developer',
-                exp1_desc: 'Developing custom websites for small businesses, focusing on performance, SEO, and responsive design.',
-                exp2_role: 'Active Member',
-                exp2_desc: 'Participating in workshops, hackathons, and collaborative projects to enhance technical skills and network.',
-                stack_title: 'Technologies',
-                projects_title: 'Selected Work',
+                nav_about: "About",
+                nav_experience: "Experience",
+                nav_projects: "Projects",
+                nav_contact: "Contact",
+                hero_scroll: "Scroll",
+                about_title: "About Me",
+                about_p1:
+                    "I am a creative developer with a passion for building digital products that are not only functional but also aesthetically pleasing. I believe in the power of minimalism and clarity in design.",
+                about_p2:
+                    "Currently studying Software Engineering, I bridge the gap between engineering and design, ensuring every pixel serves a purpose.",
+                edu_title: "Education",
+                edu_uni_major: "Informatics / Software Engineering",
+                edu_hs_major: "Software Engineering",
+                exp_title: "Experience",
+                exp_subtitle: "My professional journey and community involvement.",
+                exp1_role: "Freelance Web Developer",
+                exp1_desc:
+                    "Developing custom websites for small businesses, focusing on performance, SEO, and responsive design.",
+                exp2_role: "Active Member",
+                exp2_desc:
+                    "Participating in workshops, hackathons, and collaborative projects to enhance technical skills and network.",
+                stack_title: "Technologies",
+                projects_title: "Selected Work",
                 projects_subtitle: "A collection of projects I've crafted.",
-                view_all: 'View All Archives',
-                proj1_desc: 'A clean, distraction-free shopping experience focusing on product photography and typography.',
-                proj2_desc: 'Productivity application with drag-and-drop functionality and calm color schemes.',
-                proj3_desc: 'Minimalist weather dashboard providing essential data with beautiful atmospheric gradients.',
-                contact_title: 'Get in Touch',
-                contact_subtitle: "Have a project in mind? Let's create something beautiful.",
-                form_name: 'Name',
-                form_email: 'Email',
-                form_message: 'Message',
-                form_submit: 'Send Message',
-                footer_rights: 'All rights reserved.'
+                view_all: "View All Archives",
+                proj1_desc:
+                    "A clean, distraction-free shopping experience focusing on product photography and typography.",
+                proj2_desc:
+                    "Productivity application with drag-and-drop functionality and calm color schemes.",
+                proj3_desc:
+                    "Minimalist weather dashboard providing essential data with beautiful atmospheric gradients.",
+                contact_title: "Get in Touch",
+                contact_subtitle:
+                    "Have a project in mind? Let's create something beautiful.",
+                form_name: "Name",
+                form_email: "Email",
+                form_message: "Message",
+                form_submit: "Send Message",
+                footer_rights: "All rights reserved.",
             },
             id: {
-                nav_about: 'Tentang',
-                nav_experience: 'Pengalaman',
-                nav_projects: 'Projek',
-                nav_contact: 'Kontak',
-                hero_scroll: 'Gulir',
-                about_title: 'Tentang Saya',
-                about_p1: 'Saya adalah pengembang kreatif yang bersemangat membangun produk digital yang tidak hanya fungsional tetapi juga estetis. Saya percaya pada kekuatan minimalisme dan kejelasan dalam desain.',
-                about_p2: 'Saat ini belajar Rekayasa Perangkat Lunak, saya menjembatani kesenjangan antara teknik dan desain, memastikan setiap piksel memiliki tujuan.',
-                edu_title: 'Pendidikan',
-                edu_uni_major: 'Informatika / Rekayasa Perangkat Lunak',
-                edu_hs_major: 'Rekayasa Perangkat Lunak',
-                exp_title: 'Pengalaman',
-                exp_subtitle: 'Perjalanan profesional dan keterlibatan komunitas saya.',
-                exp1_role: 'Web Developer Freelance',
-                exp1_desc: 'Mengembangkan situs web kustom untuk bisnis kecil, berfokus pada performa, SEO, dan desain responsif.',
-                exp2_role: 'Anggota Aktif',
-                exp2_desc: 'Berpartisipasi dalam workshop, hackathon, dan proyek kolaboratif untuk meningkatkan keterampilan teknis dan jaringan.',
-                stack_title: 'Teknologi',
-                projects_title: 'Karya Pilihan',
-                projects_subtitle: 'Koleksi projek yang telah saya buat.',
-                view_all: 'Lihat Semua Arsip',
-                proj1_desc: 'Pengalaman belanja yang bersih dan bebas gangguan, berfokus pada fotografi produk dan tipografi.',
-                proj2_desc: 'Aplikasi produktivitas dengan fungsionalitas drag-and-drop dan skema warna yang tenang.',
-                proj3_desc: 'Dasbor cuaca minimalis yang menyediakan data penting dengan gradasi atmosfer yang indah.',
-                contact_title: 'Hubungi Saya',
-                contact_subtitle: 'Punya ide projek? Mari buat sesuatu yang indah.',
-                form_name: 'Nama',
-                form_email: 'Email',
-                form_message: 'Pesan',
-                form_submit: 'Kirim Pesan',
-                footer_rights: 'Hak cipta dilindungi.'
-            }
+                nav_about: "Tentang",
+                nav_experience: "Pengalaman",
+                nav_projects: "Projek",
+                nav_contact: "Kontak",
+                hero_scroll: "Gulir",
+                about_title: "Tentang Saya",
+                about_p1:
+                    "Saya adalah pengembang kreatif yang bersemangat membangun produk digital yang tidak hanya fungsional tetapi juga estetis. Saya percaya pada kekuatan minimalisme dan kejelasan dalam desain.",
+                about_p2:
+                    "Saat ini belajar Rekayasa Perangkat Lunak, saya menjembatani kesenjangan antara teknik dan desain, memastikan setiap piksel memiliki tujuan.",
+                edu_title: "Pendidikan",
+                edu_uni_major: "Informatika / Rekayasa Perangkat Lunak",
+                edu_hs_major: "Rekayasa Perangkat Lunak",
+                exp_title: "Pengalaman",
+                exp_subtitle:
+                    "Perjalanan profesional dan keterlibatan komunitas saya.",
+                exp1_role: "Web Developer Freelance",
+                exp1_desc:
+                    "Mengembangkan situs web kustom untuk bisnis kecil, berfokus pada performa, SEO, dan desain responsif.",
+                exp2_role: "Anggota Aktif",
+                exp2_desc:
+                    "Berpartisipasi dalam workshop, hackathon, dan proyek kolaboratif untuk meningkatkan keterampilan teknis dan jaringan.",
+                stack_title: "Teknologi",
+                projects_title: "Karya Pilihan",
+                projects_subtitle: "Koleksi projek yang telah saya buat.",
+                view_all: "Lihat Semua Arsip",
+                proj1_desc:
+                    "Pengalaman belanja yang bersih dan bebas gangguan, berfokus pada fotografi produk dan tipografi.",
+                proj2_desc:
+                    "Aplikasi produktivitas dengan fungsionalitas drag-and-drop dan skema warna yang tenang.",
+                proj3_desc:
+                    "Dasbor cuaca minimalis yang menyediakan data penting dengan gradasi atmosfer yang indah.",
+                contact_title: "Hubungi Saya",
+                contact_subtitle: "Punya ide projek? Mari buat sesuatu yang indah.",
+                form_name: "Nama",
+                form_email: "Email",
+                form_message: "Pesan",
+                form_submit: "Kirim Pesan",
+                footer_rights: "Hak cipta dilindungi.",
+            },
         };
 
         // --- Logic ---
-        document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener("DOMContentLoaded", () => {
             const html = document.documentElement;
-            const themeToggle = document.getElementById('theme-toggle');
-            const langToggle = document.getElementById('lang-toggle');
-            const langSpan = langToggle.querySelector('span');
-            
+            const themeToggle = document.getElementById("theme-toggle");
+            const langToggle = document.getElementById("lang-toggle");
+            const langSpan = langToggle.querySelector("span");
+
             // Theme
-            const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'dark');
-            if (savedTheme === 'dark') html.classList.add('dark');
-            
-            themeToggle.addEventListener('click', () => {
-                html.classList.toggle('dark');
-                localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+            const savedTheme =
+                localStorage.getItem("theme") ||
+                (window.matchMedia("(prefers-color-scheme: dark)").matches
+                    ? "dark"
+                    : "dark");
+            if (savedTheme === "dark") html.classList.add("dark");
+
+            themeToggle.addEventListener("click", () => {
+                html.classList.toggle("dark");
+                localStorage.setItem(
+                    "theme",
+                    html.classList.contains("dark") ? "dark" : "light"
+                );
             });
 
             // Mobile Menu Toggle
-            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
-            const mobileLangToggle = document.getElementById('mobile-lang-toggle');
-            
-            mobileMenuToggle.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
+            const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+            const mobileMenu = document.getElementById("mobile-menu");
+            const mobileThemeToggle = document.getElementById(
+                "mobile-theme-toggle"
+            );
+            const mobileLangToggle = document.getElementById("mobile-lang-toggle");
+
+            mobileMenuToggle.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
             });
-            
+
             // Close mobile menu when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!mobileMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
-                    mobileMenu.classList.add('hidden');
+            document.addEventListener("click", (e) => {
+                if (
+                    !mobileMenu.contains(e.target) &&
+                    !mobileMenuToggle.contains(e.target)
+                ) {
+                    mobileMenu.classList.add("hidden");
                 }
             });
-            
+
             // Mobile theme toggle
-            mobileThemeToggle.addEventListener('click', () => {
-                html.classList.toggle('dark');
-                localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+            mobileThemeToggle.addEventListener("click", () => {
+                html.classList.toggle("dark");
+                localStorage.setItem(
+                    "theme",
+                    html.classList.contains("dark") ? "dark" : "light"
+                );
             });
-            
+
             // Mobile language toggle
-            mobileLangToggle.addEventListener('click', () => {
-                const newLang = currentLang === 'en' ? 'id' : 'en';
+            mobileLangToggle.addEventListener("click", () => {
+                const newLang = currentLang === "en" ? "id" : "en";
                 updateLanguage(newLang);
             });
 
             // Language
-            let currentLang = localStorage.getItem('lang') || 'en';
-            
+            let currentLang = localStorage.getItem("lang") || "en";
+
             function updateLanguage(lang) {
                 // Fade out text
-                document.querySelectorAll('.text-fade').forEach(el => el.classList.add('hidden-text'));
-                
+                document
+                    .querySelectorAll(".text-fade")
+                    .forEach((el) => el.classList.add("hidden-text"));
+
                 setTimeout(() => {
                     // Update text
-                    document.querySelectorAll('[data-i18n]').forEach(el => {
-                        const key = el.getAttribute('data-i18n');
-                        if (translations[lang][key]) el.textContent = translations[lang][key];
+                    document.querySelectorAll("[data-i18n]").forEach((el) => {
+                        const key = el.getAttribute("data-i18n");
+                        if (translations[lang][key])
+                            el.textContent = translations[lang][key];
                     });
-                    langSpan.textContent = lang === 'en' ? 'EN' : 'ID';
-                    
+                    langSpan.textContent = lang === "en" ? "EN" : "ID";
+
                     // Update mobile lang text
-                    const mobileLangText = document.querySelector('.mobile-lang-text');
-                    if (mobileLangText) mobileLangText.textContent = 'EN / ID';
-                    
+                    const mobileLangText = document.querySelector(".mobile-lang-text");
+                    if (mobileLangText) mobileLangText.textContent = "EN / ID";
+
                     // Update Hero Content
                     updateHeroContent(lang);
 
                     // Fade in text
-                    document.querySelectorAll('.text-fade').forEach(el => el.classList.remove('hidden-text'));
+                    document
+                        .querySelectorAll(".text-fade")
+                        .forEach((el) => el.classList.remove("hidden-text"));
                 }, 300);
-                
-                localStorage.setItem('lang', lang);
+
+                localStorage.setItem("lang", lang);
                 currentLang = lang;
             }
 
-            langToggle.addEventListener('click', () => {
-                const newLang = currentLang === 'en' ? 'id' : 'en';
+            langToggle.addEventListener("click", () => {
+                const newLang = currentLang === "en" ? "id" : "en";
                 updateLanguage(newLang);
             });
 
             // Initial Lang Load
             updateLanguage(currentLang);
-            
+
             // Start typing animation
             setTimeout(() => typeRole(), 1000);
 
             // Parallax Effect (optimized with throttle)
-            const heroParallax = document.querySelector('.hero-parallax');
+            const heroParallax = document.querySelector(".hero-parallax");
             let ticking = false;
             if (heroParallax) {
-                document.addEventListener('mousemove', (e) => {
+                document.addEventListener("mousemove", (e) => {
                     if (!ticking) {
                         window.requestAnimationFrame(() => {
                             const x = (e.clientX / window.innerWidth - 0.5) * 15;
@@ -797,19 +1105,31 @@
             }
 
             // Hero Content
-            const heroRole = document.getElementById('hero-role');
-            const heroDescription = document.getElementById('hero-description');
-            const typingText = document.getElementById('typing-text');
-            
+            const heroRole = document.getElementById("hero-role");
+            const heroDescription = document.getElementById("hero-description");
+            const typingText = document.getElementById("typing-text");
+
             const heroContent = {
                 en: {
-                    roles: ['Web Developer', 'IT Enthusiast', 'Software Engineering Student', 'Language Learner'],
-                    description: 'A multidisciplinary developer helping build modern digital experiences through clean visuals, thoughtful interactions, and purposeful design.'
+                    roles: [
+                        "Web Developer",
+                        "IT Enthusiast",
+                        "Software Engineering Student",
+                        "Language Learner",
+                    ],
+                    description:
+                        "A multidisciplinary developer helping build modern digital experiences through clean visuals, thoughtful interactions, and purposeful design.",
                 },
                 id: {
-                    roles: ['Pembuat Web', 'IT Antusias', 'Mahasiswa Teknik Informatika', 'Pelajar Bahasa'],
-                    description: 'Seorang pengembang multidisipliner yang membantu membangun pengalaman digital modern melalui visual yang bersih, interaksi yang terarah, dan desain yang bermakna.'
-                }
+                    roles: [
+                        "Pembuat Web",
+                        "IT Antusias",
+                        "Mahasiswa Teknik Informatika",
+                        "Pelajar Bahasa",
+                    ],
+                    description:
+                        "Seorang pengembang multidisipliner yang membantu membangun pengalaman digital modern melalui visual yang bersih, interaksi yang terarah, dan desain yang bermakna.",
+                },
             };
 
             let currentRoleIndex = 0;
@@ -820,13 +1140,19 @@
             function typeRole() {
                 const roles = heroContent[currentLang].roles;
                 const currentRole = roles[currentRoleIndex];
-                
+
                 if (isDeleting) {
-                    typingText.textContent = currentRole.substring(0, currentCharIndex - 1);
+                    typingText.textContent = currentRole.substring(
+                        0,
+                        currentCharIndex - 1
+                    );
                     currentCharIndex--;
                     typingSpeed = 50;
                 } else {
-                    typingText.textContent = currentRole.substring(0, currentCharIndex + 1);
+                    typingText.textContent = currentRole.substring(
+                        0,
+                        currentCharIndex + 1
+                    );
                     currentCharIndex++;
                     typingSpeed = 100;
                 }
@@ -845,49 +1171,57 @@
             }
 
             function updateHeroContent(lang) {
-                if (heroDescription) heroDescription.textContent = heroContent[lang].description;
+                if (heroDescription)
+                    heroDescription.textContent = heroContent[lang].description;
                 // Reset typing animation
                 currentRoleIndex = 0;
                 currentCharIndex = 0;
                 isDeleting = false;
-                if (typingText) typingText.textContent = '';
+                if (typingText) typingText.textContent = "";
             }
 
             // Scroll Animations
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animate-fade-in-up');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1 });
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("animate-fade-in-up");
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                { threshold: 0.1 }
+            );
 
-            document.querySelectorAll('.reveal').forEach(el => {
-                el.style.opacity = '0';
+            document.querySelectorAll(".reveal").forEach((el) => {
+                el.style.opacity = "0";
                 observer.observe(el);
             });
 
             // Active Section Highlighting
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('.nav-link');
-            
-            const navObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const id = entry.target.getAttribute('id');
-                        navLinks.forEach(link => {
-                            link.classList.remove('active');
-                            if (link.getAttribute('href') === `#${id}`) {
-                                link.classList.add('active');
-                            }
-                        });
-                    }
-                });
-            }, { threshold: 0.3 });
+            const sections = document.querySelectorAll("section[id]");
+            const navLinks = document.querySelectorAll(".nav-link");
 
-            sections.forEach(section => navObserver.observe(section));
+            const navObserver = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            const id = entry.target.getAttribute("id");
+                            navLinks.forEach((link) => {
+                                link.classList.remove("active");
+                                if (link.getAttribute("href") === `#${id}`) {
+                                    link.classList.add("active");
+                                }
+                            });
+                        }
+                    });
+                },
+                { threshold: 0.3 }
+            );
+
+            sections.forEach((section) => navObserver.observe(section));
         });
     </script>
 </body>
+
 </html>
