@@ -265,6 +265,23 @@
                 display: none !important;
             }
         }
+        
+        /* Landscape mode fixes for mobile */
+        @media (max-height: 500px) and (orientation: landscape) {
+            #hero {
+                min-height: 100vh;
+                height: auto;
+                padding-top: 4rem;
+                padding-bottom: 2rem;
+            }
+            #hero h1 {
+                font-size: 2.5rem !important;
+                margin-bottom: 0.5rem !important;
+            }
+            #hero .mt-6 {
+                margin-top: 1rem !important;
+            }
+        }
     </style>
 </head>
 
@@ -275,14 +292,14 @@
 
     <!-- Navigation -->
     <nav id="main-nav" class="fixed top-0 w-full z-[100] backdrop-blur-md bg-transparent transition-all duration-500">
-        <div class="max-w-7xl mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-2 sm:px-4 md:px-8 h-14 sm:h-16 flex items-center justify-between">
             <div
-                class="flex items-center space-x-4 md:space-x-12 text-[10px] font-semibold tracking-[0.2em] uppercase text-black dark:text-white drop-shadow-lg">
+                class="flex items-center space-x-2 sm:space-x-4 md:space-x-12 text-[8px] sm:text-[10px] font-semibold tracking-[0.1em] sm:tracking-[0.2em] uppercase text-black dark:text-white drop-shadow-lg">
                 <a href="#hero"
                     class="nav-link active hover:opacity-80 transition-colors hidden md:inline-block">Adni.</a>
                 <a href="#about" class="nav-link hover:opacity-80 transition-colors" data-i18n="nav_about">About</a>
                 <a href="#experience" class="nav-link hover:opacity-80 transition-colors"
-                    data-i18n="nav_experience">Experience</a>
+                    data-i18n="nav_experience">Exp</a>
                 <a href="#projects" class="nav-link hover:opacity-80 transition-colors"
                     data-i18n="nav_projects">Projects</a>
                 <a href="#contact" class="nav-link hover:opacity-80 transition-colors"
@@ -342,9 +359,9 @@
           "></div>
 
             <!-- Main Content -->
-            <div class="relative z-30 h-full flex flex-col justify-center px-8 md:px-16 lg:px-24 max-w-7xl mx-auto">
+            <div class="relative z-30 h-full flex flex-col justify-center pt-16 sm:pt-20 px-6 sm:px-8 md:px-16 lg:px-24 max-w-7xl mx-auto">
                 <!-- Giant Name -->
-                <h1 class="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tight text-white leading-none mb-6 opacity-0 animate-fade-in"
+                <h1 class="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black tracking-tight text-white leading-none mb-4 sm:mb-6 opacity-0 animate-fade-in"
                     style="animation-delay: 0.2s">
                     ABUBAKAR<br />ADNI
                 </h1>
@@ -352,21 +369,21 @@
                 <!-- Subtitle -->
                 <div class="max-w-2xl opacity-0 animate-fade-in" style="animation-delay: 0.5s">
                     <p id="hero-role"
-                        class="text-lg md:text-xl text-neutral-300 dark:text-neutral-400 font-light tracking-wide mb-2 text-fade min-h-[2rem]">
+                        class="text-base sm:text-lg md:text-xl text-neutral-300 dark:text-neutral-400 font-light tracking-wide mb-2 text-fade min-h-[1.5rem] sm:min-h-[2rem]">
                         <span id="typing-text"></span><span id="cursor"
-                            class="inline-block w-0.5 h-5 bg-neutral-300 dark:bg-neutral-400 ml-1 animate-pulse"></span>
+                            class="inline-block w-0.5 h-4 sm:h-5 bg-neutral-300 dark:bg-neutral-400 ml-1 animate-pulse"></span>
                     </p>
                     <p
-                        class="text-sm md:text-base text-neutral-500 font-light tracking-widest uppercase mb-6">
+                        class="text-xs sm:text-sm md:text-base text-neutral-500 font-light tracking-widest uppercase mb-4 sm:mb-6">
                         Surabaya, Indonesia
                     </p>
                 </div>
 
                 <!-- CTA Button -->
-                <div class="mt-12 opacity-0 animate-fade-in" style="animation-delay: 0.8s">
+                <div class="mt-6 sm:mt-12 opacity-0 animate-fade-in" style="animation-delay: 0.8s">
                     <a href="#projects"
-                        class="inline-flex items-center justify-center w-14 h-14 rounded-full border border-white/30 hover:border-white/60 text-white transition-all duration-300 hover:scale-110 group">
-                        <i class="fas fa-arrow-down text-sm group-hover:translate-y-1 transition-transform"></i>
+                        class="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full border border-white/30 hover:border-white/60 text-white transition-all duration-300 hover:scale-110 group">
+                        <i class="fas fa-arrow-down text-xs sm:text-sm group-hover:translate-y-1 transition-transform"></i>
                     </a>
                 </div>
             </div>
@@ -1107,30 +1124,7 @@
                 updateLanguage(newLang);
             });
 
-            // Initial Lang Load
-            updateLanguage(currentLang);
-
-            // Start typing animation
-            setTimeout(() => typeRole(), 1000);
-
-            // Parallax Effect (optimized with throttle)
-            const heroParallax = document.querySelector(".hero-parallax");
-            let ticking = false;
-            if (heroParallax) {
-                document.addEventListener("mousemove", (e) => {
-                    if (!ticking) {
-                        window.requestAnimationFrame(() => {
-                            const x = (e.clientX / window.innerWidth - 0.5) * 15;
-                            const y = (e.clientY / window.innerHeight - 0.5) * 15;
-                            heroParallax.style.transform = `translate(${x}px, ${y}px) scale(1.05)`;
-                            ticking = false;
-                        });
-                        ticking = true;
-                    }
-                });
-            }
-
-            // Hero Content
+            // Hero Content - MUST be defined before typeRole and updateHeroContent
             const heroRole = document.getElementById("hero-role");
             const heroDescription = document.getElementById("hero-description");
             const typingText = document.getElementById("typing-text");
@@ -1164,6 +1158,7 @@
             let typingSpeed = 100;
 
             function typeRole() {
+                if (!typingText) return;
                 const roles = heroContent[currentLang].roles;
                 const currentRole = roles[currentRoleIndex];
 
@@ -1184,7 +1179,6 @@
                 }
 
                 if (!isDeleting && currentCharIndex === currentRole.length) {
-                    // Pause at end
                     typingSpeed = 2000;
                     isDeleting = true;
                 } else if (isDeleting && currentCharIndex === 0) {
@@ -1204,6 +1198,29 @@
                 currentCharIndex = 0;
                 isDeleting = false;
                 if (typingText) typingText.textContent = "";
+            }
+
+            // Initial Lang Load
+            updateLanguage(currentLang);
+
+            // Start typing animation
+            setTimeout(() => typeRole(), 1000);
+
+            // Parallax Effect (optimized with throttle)
+            const heroParallax = document.querySelector(".hero-parallax");
+            let ticking = false;
+            if (heroParallax) {
+                document.addEventListener("mousemove", (e) => {
+                    if (!ticking) {
+                        window.requestAnimationFrame(() => {
+                            const x = (e.clientX / window.innerWidth - 0.5) * 15;
+                            const y = (e.clientY / window.innerHeight - 0.5) * 15;
+                            heroParallax.style.transform = `translate(${x}px, ${y}px) scale(1.05)`;
+                            ticking = false;
+                        });
+                        ticking = true;
+                    }
+                });
             }
 
             // Scroll Animations
