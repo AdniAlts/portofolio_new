@@ -12,6 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
     <script>
         tailwind.config = {
@@ -50,7 +51,7 @@
                         "fade-in": "fadeIn 1.2s ease-out forwards",
                         "slide-up": "slideUp 0.8s ease-out forwards",
                         grain: "grain 8s steps(10) infinite",
-                        "slide-infinite": "slideInfinite 30s linear infinite",
+                        "slide-infinite": "slideInfinite 20s linear infinite",
                     },
                     keyframes: {
                         float: {
@@ -358,7 +359,7 @@
 
             <!-- Scroll Indicator -->
             <div class="absolute bottom-8 right-8 z-30 text-neutral-500 text-[10px] tracking-widest uppercase opacity-0 animate-fade-in"
-                style="animation-delay: 1s" data-i18n="hero_scroll">
+                style="animation-delay: 1s">
                 Scroll
             </div>
         </section>
@@ -499,118 +500,150 @@
                         <div class="flex gap-12 px-6 shrink-0">
                             <div
                                 class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
-                                <i
-                                    class="fab fa-html5 text-4xl text-neutral-400 group-hover:text-orange-500 transition-colors duration-300"></i>
+                                <i class="devicon-react-original text-4xl text-neutral-400 group-hover:text-cyan-400 transition-colors duration-300"></i>
                                 <span
-                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">HTML5</span>
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">React.js</span>
                             </div>
                             <div
                                 class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
-                                <i
-                                    class="fab fa-css3-alt text-4xl text-neutral-400 group-hover:text-blue-500 transition-colors duration-300"></i>
-                                <span
-                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">CSS3</span>
-                            </div>
-                            <div
-                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
-                                <i
-                                    class="fab fa-js text-4xl text-neutral-400 group-hover:text-yellow-400 transition-colors duration-300"></i>
-                                <span
-                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">JavaScript</span>
-                            </div>
-                            <div
-                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
-                                <i
-                                    class="fab fa-react text-4xl text-neutral-400 group-hover:text-cyan-400 transition-colors duration-300"></i>
-                                <span
-                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">React</span>
-                            </div>
-                            <div
-                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
-                                <i
-                                    class="fas fa-wind text-4xl text-neutral-400 group-hover:text-cyan-500 transition-colors duration-300"></i>
-                                <span
-                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Tailwind</span>
-                            </div>
-                            <div
-                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
-                                <i
-                                    class="fab fa-git-alt text-4xl text-neutral-400 group-hover:text-red-500 transition-colors duration-300"></i>
-                                <span
-                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Git</span>
-                            </div>
-                            <div
-                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
-                                <i
-                                    class="fab fa-node text-4xl text-neutral-400 group-hover:text-green-600 transition-colors duration-300"></i>
+                                <i class="devicon-nodejs-plain text-4xl text-neutral-400 group-hover:text-green-500 transition-colors duration-300"></i>
                                 <span
                                     class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Node.js</span>
                             </div>
                             <div
                                 class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
-                                <i
-                                    class="fab fa-figma text-4xl text-neutral-400 group-hover:text-purple-500 transition-colors duration-300"></i>
+                                <i class="devicon-laravel-original text-4xl text-neutral-400 group-hover:text-red-500 transition-colors duration-300"></i>
                                 <span
-                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Figma</span>
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Laravel</span>
+                            </div>
+                            <div
+                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
+                                <i class="devicon-github-original text-4xl text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors duration-300"></i>
+                                <span
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">GitHub</span>
+                            </div>
+                            <div
+                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
+                                <i class="devicon-docker-plain text-4xl text-neutral-400 group-hover:text-blue-500 transition-colors duration-300"></i>
+                                <span
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Docker</span>
+                            </div>
+                            <div
+                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
+                                <i class="devicon-dart-plain text-4xl text-neutral-400 group-hover:text-[#0175C2] transition-colors duration-300"></i>
+                                <span
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Dart</span>
+                            </div>
+                            <div
+                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
+                                <i class="devicon-flutter-plain text-4xl text-neutral-400 group-hover:text-[#02569B] transition-colors duration-300"></i>
+                                <span
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Flutter</span>
+                            </div>
+                            <div
+                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
+                                <i class="devicon-nextjs-plain text-4xl text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors duration-300"></i>
+                                <span
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Next.js</span>
+                            </div>
+                            <div
+                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
+                                <i class="devicon-tailwindcss-original text-4xl text-neutral-400 group-hover:text-[#06B6D4] transition-colors duration-300"></i>
+                                <span
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Tailwind</span>
+                            </div>
+                            <div
+                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
+                                <i class="devicon-c-plain text-4xl text-neutral-400 group-hover:text-[#A8B9CC] transition-colors duration-300"></i>
+                                <span
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">C</span>
+                            </div>
+                            <div
+                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
+                                <i class="devicon-java-plain text-4xl text-neutral-400 group-hover:text-[#ED8B00] transition-colors duration-300"></i>
+                                <span
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Java</span>
+                            </div>
+                            <div
+                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
+                                <i class="devicon-python-plain text-4xl text-neutral-400 group-hover:text-[#3776AB] transition-colors duration-300"></i>
+                                <span
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Python</span>
                             </div>
                         </div>
                         <!-- Duplicate Set for seamless loop -->
                         <div class="flex gap-12 px-6 shrink-0">
                             <div
                                 class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
-                                <i
-                                    class="fab fa-html5 text-4xl text-neutral-400 group-hover:text-orange-500 transition-colors duration-300"></i>
+                                <i class="devicon-react-original text-4xl text-neutral-400 group-hover:text-cyan-400 transition-colors duration-300"></i>
                                 <span
-                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">HTML5</span>
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">React.js</span>
                             </div>
                             <div
                                 class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
-                                <i
-                                    class="fab fa-css3-alt text-4xl text-neutral-400 group-hover:text-blue-500 transition-colors duration-300"></i>
-                                <span
-                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">CSS3</span>
-                            </div>
-                            <div
-                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
-                                <i
-                                    class="fab fa-js text-4xl text-neutral-400 group-hover:text-yellow-400 transition-colors duration-300"></i>
-                                <span
-                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">JavaScript</span>
-                            </div>
-                            <div
-                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
-                                <i
-                                    class="fab fa-react text-4xl text-neutral-400 group-hover:text-cyan-400 transition-colors duration-300"></i>
-                                <span
-                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">React</span>
-                            </div>
-                            <div
-                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
-                                <i
-                                    class="fas fa-wind text-4xl text-neutral-400 group-hover:text-cyan-500 transition-colors duration-300"></i>
-                                <span
-                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Tailwind</span>
-                            </div>
-                            <div
-                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
-                                <i
-                                    class="fab fa-git-alt text-4xl text-neutral-400 group-hover:text-red-500 transition-colors duration-300"></i>
-                                <span
-                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Git</span>
-                            </div>
-                            <div
-                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
-                                <i
-                                    class="fab fa-node text-4xl text-neutral-400 group-hover:text-green-600 transition-colors duration-300"></i>
+                                <i class="devicon-nodejs-plain text-4xl text-neutral-400 group-hover:text-green-500 transition-colors duration-300"></i>
                                 <span
                                     class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Node.js</span>
                             </div>
                             <div
                                 class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
-                                <i
-                                    class="fab fa-figma text-4xl text-neutral-400 group-hover:text-purple-500 transition-colors duration-300"></i>
+                                <i class="devicon-laravel-original text-4xl text-neutral-400 group-hover:text-red-500 transition-colors duration-300"></i>
                                 <span
-                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Figma</span>
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Laravel</span>
+                            </div>
+                            <div
+                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
+                                <i class="devicon-github-original text-4xl text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors duration-300"></i>
+                                <span
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">GitHub</span>
+                            </div>
+                            <div
+                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
+                                <i class="devicon-docker-plain text-4xl text-neutral-400 group-hover:text-blue-500 transition-colors duration-300"></i>
+                                <span
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Docker</span>
+                            </div>
+                            <div
+                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
+                                <i class="devicon-dart-plain text-4xl text-neutral-400 group-hover:text-[#0175C2] transition-colors duration-300"></i>
+                                <span
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Dart</span>
+                            </div>
+                            <div
+                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
+                                <i class="devicon-flutter-plain text-4xl text-neutral-400 group-hover:text-[#02569B] transition-colors duration-300"></i>
+                                <span
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Flutter</span>
+                            </div>
+                            <div
+                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
+                                <i class="devicon-nextjs-plain text-4xl text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors duration-300"></i>
+                                <span
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Next.js</span>
+                            </div>
+                            <div
+                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
+                                <i class="devicon-tailwindcss-original text-4xl text-neutral-400 group-hover:text-[#06B6D4] transition-colors duration-300"></i>
+                                <span
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Tailwind</span>
+                            </div>
+                            <div
+                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
+                                <i class="devicon-c-plain text-4xl text-neutral-400 group-hover:text-[#A8B9CC] transition-colors duration-300"></i>
+                                <span
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">C</span>
+                            </div>
+                            <div
+                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
+                                <i class="devicon-java-plain text-4xl text-neutral-400 group-hover:text-[#ED8B00] transition-colors duration-300"></i>
+                                <span
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Java</span>
+                            </div>
+                            <div
+                                class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-500">
+                                <i class="devicon-python-plain text-4xl text-neutral-400 group-hover:text-[#3776AB] transition-colors duration-300"></i>
+                                <span
+                                    class="text-sm font-medium text-neutral-500 dark:text-neutral-400 whitespace-nowrap">Python</span>
                             </div>
                         </div>
                     </div>
@@ -876,7 +909,6 @@
                 nav_experience: "Experience",
                 nav_projects: "Projects",
                 nav_contact: "Contact",
-                hero_scroll: "Scroll",
                 about_title: "About Me",
                 about_p1:
                     "I am Abubakar Adni, an Informatics student with a strong passion for exploring the world of technology. I enjoy learning new things, especially in areas like web development, mobile development, AI, operating systems and many more.",
@@ -917,7 +949,6 @@
                 nav_experience: "Pengalaman",
                 nav_projects: "Projek",
                 nav_contact: "Kontak",
-                hero_scroll: "Gulir",
                 about_title: "Tentang Saya",
                 about_p1:
                     "Saya Abubakar Adni, seorang mahasiswa Teknik Informatika yang memiliki ketertarikan besar pada dunia teknologi. Saya menikmati proses belajar hal-hal baru, mulai dari pengembangan website, mobile, artificial intelligence, sistem operasi dan lain sebagainya.",
@@ -981,26 +1012,32 @@
             // Mobile Menu Toggle
             const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
             const mobileMenu = document.getElementById("mobile-menu");
-            const mobileThemeToggle = document.getElementById(
-                "mobile-theme-toggle"
-            );
-            const mobileLangToggle = document.getElementById("mobile-lang-toggle");
+            const mobileMenuClose = document.getElementById("mobile-menu-close");
+            const mobileNavLinks = mobileMenu.querySelectorAll(".nav-link-mobile");
+            const mainNav = document.getElementById("main-nav");
 
             mobileMenuToggle.addEventListener("click", () => {
-                mobileMenu.classList.toggle("hidden");
+                mobileMenu.classList.remove("hidden");
+                mainNav.classList.add("hidden");
             });
 
-            // Close mobile menu when clicking outside
-            document.addEventListener("click", (e) => {
-                if (
-                    !mobileMenu.contains(e.target) &&
-                    !mobileMenuToggle.contains(e.target)
-                ) {
+            mobileMenuClose.addEventListener("click", () => {
+                mobileMenu.classList.add("hidden");
+                mainNav.classList.remove("hidden");
+            });
+
+            // Close mobile menu when a link is clicked
+            mobileNavLinks.forEach(link => {
+                link.addEventListener("click", () => {
                     mobileMenu.classList.add("hidden");
-                }
+                    mainNav.classList.remove("hidden");
+                });
             });
 
             // Mobile theme toggle
+            const mobileThemeToggle = document.getElementById(
+                "mobile-theme-toggle"
+            );
             mobileThemeToggle.addEventListener("click", () => {
                 html.classList.toggle("dark");
                 localStorage.setItem(
@@ -1010,6 +1047,7 @@
             });
 
             // Mobile language toggle
+            const mobileLangToggle = document.getElementById("mobile-lang-toggle");
             mobileLangToggle.addEventListener("click", () => {
                 const newLang = currentLang === "en" ? "id" : "en";
                 updateLanguage(newLang);
