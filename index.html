@@ -299,7 +299,7 @@
                     class="nav-link active hover:opacity-80 transition-colors hidden md:inline-block">Adni.</a>
                 <a href="#about" class="nav-link hover:opacity-80 transition-colors" data-i18n="nav_about">About</a>
                 <a href="#experience" class="nav-link hover:opacity-80 transition-colors"
-                    data-i18n="nav_experience">Exp</a>
+                    data-i18n="nav_experience">Experience</a>
                 <a href="#projects" class="nav-link hover:opacity-80 transition-colors"
                     data-i18n="nav_projects">Projects</a>
                 <a href="#contact" class="nav-link hover:opacity-80 transition-colors"
@@ -1043,26 +1043,17 @@
             // Mobile Menu Toggle
             const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
             const mobileMenu = document.getElementById("mobile-menu");
-            const mobileMenuClose = document.getElementById("mobile-menu-close");
-            const mobileNavLinks = mobileMenu.querySelectorAll(".nav-link-mobile");
             const mainNav = document.getElementById("main-nav");
 
             mobileMenuToggle.addEventListener("click", () => {
-                mobileMenu.classList.remove("hidden");
-                mainNav.classList.add("hidden");
+                mobileMenu.classList.toggle("hidden");
             });
 
-            mobileMenuClose.addEventListener("click", () => {
-                mobileMenu.classList.add("hidden");
-                mainNav.classList.remove("hidden");
-            });
-
-            // Close mobile menu when a link is clicked
-            mobileNavLinks.forEach(link => {
-                link.addEventListener("click", () => {
+            // Close mobile menu when clicking outside
+            document.addEventListener("click", (e) => {
+                if (!mobileMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
                     mobileMenu.classList.add("hidden");
-                    mainNav.classList.remove("hidden");
-                });
+                }
             });
 
             // Mobile theme toggle
@@ -1075,6 +1066,7 @@
                     "theme",
                     html.classList.contains("dark") ? "dark" : "light"
                 );
+                mobileMenu.classList.add("hidden");
             });
 
             // Mobile language toggle
@@ -1082,6 +1074,7 @@
             mobileLangToggle.addEventListener("click", () => {
                 const newLang = currentLang === "en" ? "id" : "en";
                 updateLanguage(newLang);
+                mobileMenu.classList.add("hidden");
             });
 
             // Language
