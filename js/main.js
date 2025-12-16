@@ -353,12 +353,15 @@ function initNavHighlighting() {
 // Tech Slider Swipeable
 function initTechSlider() {
     const slider = document.getElementById("tech-slider");
-    if (!slider) return;
+    const container = document.getElementById("tech-slider-container");
+    if (!slider || !container) return;
 
     let isDown = false;
     let startX;
     let scrollLeft;
     let animationPaused = false;
+    let velX = 0;
+    let momentumID;
 
     // Pause animation on interaction
     function pauseAnimation() {
@@ -376,12 +379,22 @@ function initTechSlider() {
         }, 3000);
     }
 
+    // Momentum scrolling
+    function momentumLoop() {
+        container.scrollLeft += velX;
+        velX *= 0.95; // Friction
+        if (Math.abs(velX) > 0.5) {
+            momentumID = requestAnimationFrame(momentumLoop);
+        }
+    }
+
     // Mouse events
     slider.addEventListener("mousedown", (e) => {
         isDown = true;
         slider.classList.add("active");
-        startX = e.pageX - slider.offsetLeft;
-        scrollLeft = slider.parentElement.scrollLeft;
+        startX = e.pageX;
+        scrollLeft = container.scrollLeft;
+        cancelAnimationFrame(momentumID);
         pauseAnimation();
     });
 
@@ -389,42 +402,57 @@ function initTechSlider() {
         if (isDown) {
             isDown = false;
             slider.classList.remove("active");
+            momentumID = requestAnimationFrame(momentumLoop);
             resumeAnimation();
         }
     });
 
     slider.addEventListener("mouseup", () => {
-        isDown = false;
-        slider.classList.remove("active");
-        resumeAnimation();
+        if (isDown) {
+            isDown = false;
+            slider.classList.remove("active");
+            momentumID = requestAnimationFrame(momentumLoop);
+            resumeAnimation();
+        }
     });
 
     slider.addEventListener("mousemove", (e) => {
         if (!isDown) return;
         e.preventDefault();
-        const x = e.pageX - slider.offsetLeft;
-        const walk = (x - startX) * 2;
-        slider.parentElement.scrollLeft = scrollLeft - walk;
+        const x = e.pageX;
+        const walk = (x - startX) * 1.5;
+        velX = x - startX;
+        startX = x;
+        container.scrollLeft = scrollLeft - walk;
+        scrollLeft = container.scrollLeft;
     });
 
     // Touch events for mobile
+    let lastTouchX = 0;
     slider.addEventListener("touchstart", (e) => {
         isDown = true;
-        startX = e.touches[0].pageX - slider.offsetLeft;
-        scrollLeft = slider.parentElement.scrollLeft;
+        startX = e.touches[0].pageX;
+        lastTouchX = startX;
+        scrollLeft = container.scrollLeft;
+        cancelAnimationFrame(momentumID);
         pauseAnimation();
     }, { passive: true });
 
     slider.addEventListener("touchend", () => {
         isDown = false;
+        momentumID = requestAnimationFrame(momentumLoop);
         resumeAnimation();
     });
 
     slider.addEventListener("touchmove", (e) => {
         if (!isDown) return;
-        const x = e.touches[0].pageX - slider.offsetLeft;
-        const walk = (x - startX) * 2;
-        slider.parentElement.scrollLeft = scrollLeft - walk;
+        const x = e.touches[0].pageX;
+        const walk = (x - startX) * 1.5;
+        velX = (x - lastTouchX) * 0.5;
+        lastTouchX = x;
+        container.scrollLeft = scrollLeft - walk;
+        scrollLeft = container.scrollLeft;
+        startX = x;
     }, { passive: true });
 }
 

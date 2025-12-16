@@ -189,6 +189,8 @@ html.dark .nav-link.active {
     overflow-x: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
 }
 
 #tech-slider-container::-webkit-scrollbar {
@@ -200,6 +202,7 @@ html.dark .nav-link.active {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+    will-change: transform;
 }
 
 #tech-slider.active {
