@@ -350,6 +350,84 @@ function initNavHighlighting() {
     sections.forEach((section) => navObserver.observe(section));
 }
 
+// Tech Slider Swipeable
+function initTechSlider() {
+    const slider = document.getElementById("tech-slider");
+    if (!slider) return;
+
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+    let animationPaused = false;
+
+    // Pause animation on interaction
+    function pauseAnimation() {
+        if (!animationPaused) {
+            slider.style.animationPlayState = "paused";
+            animationPaused = true;
+        }
+    }
+
+    // Resume animation after delay
+    function resumeAnimation() {
+        setTimeout(() => {
+            slider.style.animationPlayState = "running";
+            animationPaused = false;
+        }, 3000);
+    }
+
+    // Mouse events
+    slider.addEventListener("mousedown", (e) => {
+        isDown = true;
+        slider.classList.add("active");
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.parentElement.scrollLeft;
+        pauseAnimation();
+    });
+
+    slider.addEventListener("mouseleave", () => {
+        if (isDown) {
+            isDown = false;
+            slider.classList.remove("active");
+            resumeAnimation();
+        }
+    });
+
+    slider.addEventListener("mouseup", () => {
+        isDown = false;
+        slider.classList.remove("active");
+        resumeAnimation();
+    });
+
+    slider.addEventListener("mousemove", (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 2;
+        slider.parentElement.scrollLeft = scrollLeft - walk;
+    });
+
+    // Touch events for mobile
+    slider.addEventListener("touchstart", (e) => {
+        isDown = true;
+        startX = e.touches[0].pageX - slider.offsetLeft;
+        scrollLeft = slider.parentElement.scrollLeft;
+        pauseAnimation();
+    }, { passive: true });
+
+    slider.addEventListener("touchend", () => {
+        isDown = false;
+        resumeAnimation();
+    });
+
+    slider.addEventListener("touchmove", (e) => {
+        if (!isDown) return;
+        const x = e.touches[0].pageX - slider.offsetLeft;
+        const walk = (x - startX) * 2;
+        slider.parentElement.scrollLeft = scrollLeft - walk;
+    }, { passive: true });
+}
+
 // --- Event Listeners ---
 function initEventListeners() {
     // Scroll event for nav colors
@@ -400,6 +478,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initParallax();
     initScrollAnimations();
     initNavHighlighting();
+    initTechSlider();
 
     // Start typing animation
     setTimeout(() => typeRole(), 1000);

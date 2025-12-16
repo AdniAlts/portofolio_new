@@ -183,3 +183,25 @@ html.dark .nav-link.active {
         margin-top: 1rem !important;
     }
 }
+
+/* Tech Slider Swipeable */
+#tech-slider-container {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+#tech-slider-container::-webkit-scrollbar {
+    display: none;
+}
+
+#tech-slider {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+#tech-slider.active {
+    cursor: grabbing;
+}
