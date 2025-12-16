@@ -289,10 +289,10 @@
     class="bg-neutral-50 text-neutral-800 dark:bg-neutral-950 dark:text-neutral-200 transition-colors duration-700 ease-in-out antialiased overflow-x-hidden selection:bg-accent-soft selection:text-accent-dark">
     
     <!-- Loading Screen -->
-    <div id="loading-screen" class="fixed inset-0 z-[200] flex items-center justify-center bg-black dark:bg-white transition-opacity duration-500">
+    <div id="loading-screen" class="fixed inset-0 z-[200] flex items-center justify-center bg-white dark:bg-black transition-opacity duration-500">
         <div class="loading-logo animate-pulse">
-            <img src="./images/logo_dark.png" alt="Loading" class="h-24 sm:h-32 dark:hidden" />
-            <img src="./images/logo_light.png" alt="Loading" class="h-24 sm:h-32 hidden dark:block" />
+            <img src="./images/logo_light.png" alt="Loading" class="h-24 sm:h-32 dark:hidden" />
+            <img src="./images/logo_dark.png" alt="Loading" class="h-24 sm:h-32 hidden dark:block" />
         </div>
     </div>
     
@@ -302,12 +302,12 @@
     <!-- Navigation -->
     <nav id="main-nav" class="fixed top-0 w-full z-[100] backdrop-blur-md bg-transparent transition-all duration-500">
         <div class="max-w-7xl mx-auto px-2 sm:px-4 md:px-8 h-14 sm:h-16 flex items-center justify-between">
-            <div
-                class="flex items-center space-x-2 sm:space-x-4 md:space-x-12 text-[10px] sm:text-xs md:text-sm font-semibold tracking-[0.1em] sm:tracking-[0.2em] uppercase text-black dark:text-white drop-shadow-lg">
+            <div id="nav-items"
+                class="flex items-center space-x-2 sm:space-x-4 md:space-x-12 text-[10px] sm:text-xs md:text-sm font-semibold tracking-[0.1em] sm:tracking-[0.2em] uppercase text-white dark:text-white drop-shadow-lg transition-colors duration-300">
                 <a href="#hero"
                     class="nav-link active hover:opacity-80 transition-colors hidden md:inline-block">
-                    <img src="./images/logo_dark.png" alt="Logo" class="h-5 dark:hidden" />
-                    <img src="./images/logo_light.png" alt="Logo" class="h-5 hidden dark:block" />
+                    <img src="./images/logo_light.png" alt="Logo" class="h-5 logo-light hidden" />
+                    <img src="./images/logo_dark.png" alt="Logo" class="h-5 logo-dark" />
                 </a>
                 <a href="#about" class="nav-link hover:opacity-80 transition-colors" data-i18n="nav_about">About</a>
                 <a href="#experience" class="nav-link hover:opacity-80 transition-colors"
@@ -318,18 +318,18 @@
                     data-i18n="nav_contact">Contact</a>
             </div>
 
-            <div class="flex items-center space-x-3">
+            <div id="nav-controls" class="flex items-center space-x-3 text-white dark:text-white transition-colors duration-300">
                 <button id="lang-toggle"
-                    class="hidden md:block text-[10px] font-semibold tracking-widest px-3 py-1.5 rounded-full border border-black/50 dark:border-white/50 hover:border-black dark:hover:border-white transition-all text-black dark:text-white drop-shadow-lg">
+                    class="hidden md:block text-[10px] font-semibold tracking-widest px-3 py-1.5 rounded-full border border-white/50 dark:border-white/50 hover:border-white dark:hover:border-white transition-all drop-shadow-lg">
                     <span class="text-fade">EN</span>
                 </button>
                 <button id="theme-toggle"
-                    class="hidden md:flex w-8 h-8 items-center justify-center rounded-full hover:bg-black/20 dark:hover:bg-white/20 transition-colors text-black dark:text-white drop-shadow-lg">
+                    class="hidden md:flex w-8 h-8 items-center justify-center rounded-full hover:bg-white/20 dark:hover:bg-white/20 transition-colors drop-shadow-lg">
                     <i class="fas fa-moon dark:hidden text-xs"></i>
                     <i class="fas fa-sun hidden dark:block text-xs"></i>
                 </button>
                 <button id="mobile-menu-toggle"
-                    class="block md:hidden w-10 h-10 flex items-center justify-center text-black dark:text-white drop-shadow-lg z-[60]">
+                    class="block md:hidden w-10 h-10 flex items-center justify-center drop-shadow-lg z-[60]">
                     <i class="fas fa-bars text-lg"></i>
                 </button>
             </div>
@@ -1045,6 +1045,61 @@
                 }, 500);
             }, 1500);
 
+            // Scroll-based nav color change (light mode only)
+            const navItems = document.getElementById("nav-items");
+            const navControls = document.getElementById("nav-controls");
+            const langToggleBtn = document.getElementById("lang-toggle");
+            const heroSection = document.getElementById("hero");
+            const logoLight = document.querySelector(".logo-light");
+            const logoDark = document.querySelector(".logo-dark");
+
+            function updateNavColors() {
+                const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+                const scrollY = window.scrollY;
+                const isDark = html.classList.contains("dark");
+
+                if (!isDark) {
+                    // Light mode: white on hero, black when scrolled past hero
+                    if (scrollY < heroBottom - 100) {
+                        // On hero section - white text
+                        navItems.classList.remove("text-black");
+                        navItems.classList.add("text-white");
+                        navControls.classList.remove("text-black");
+                        navControls.classList.add("text-white");
+                        langToggleBtn.classList.remove("border-black/50", "hover:border-black");
+                        langToggleBtn.classList.add("border-white/50", "hover:border-white");
+                        // Show light logo (white logo for dark background)
+                        logoLight.classList.add("hidden");
+                        logoDark.classList.remove("hidden");
+                    } else {
+                        // Scrolled past hero - black text
+                        navItems.classList.remove("text-white");
+                        navItems.classList.add("text-black");
+                        navControls.classList.remove("text-white");
+                        navControls.classList.add("text-black");
+                        langToggleBtn.classList.remove("border-white/50", "hover:border-white");
+                        langToggleBtn.classList.add("border-black/50", "hover:border-black");
+                        // Show dark logo (black logo for light background)
+                        logoLight.classList.remove("hidden");
+                        logoDark.classList.add("hidden");
+                    }
+                } else {
+                    // Dark mode: always white
+                    navItems.classList.remove("text-black");
+                    navItems.classList.add("text-white");
+                    navControls.classList.remove("text-black");
+                    navControls.classList.add("text-white");
+                    langToggleBtn.classList.remove("border-black/50", "hover:border-black");
+                    langToggleBtn.classList.add("border-white/50", "hover:border-white");
+                    // Show light logo (white logo)
+                    logoLight.classList.add("hidden");
+                    logoDark.classList.remove("hidden");
+                }
+            }
+
+            window.addEventListener("scroll", updateNavColors);
+            updateNavColors(); // Initial call
+
             // Theme
             const savedTheme =
                 localStorage.getItem("theme") ||
@@ -1059,6 +1114,7 @@
                     "theme",
                     html.classList.contains("dark") ? "dark" : "light"
                 );
+                updateNavColors();
             });
 
             // Mobile Menu Toggle
@@ -1088,6 +1144,7 @@
                     html.classList.contains("dark") ? "dark" : "light"
                 );
                 mobileMenu.classList.add("hidden");
+                updateNavColors();
             });
 
             // Mobile language toggle
