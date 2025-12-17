@@ -287,22 +287,24 @@ function typeRole() {
     setTimeout(typeRole, typingSpeed);
 }
 
-// Parallax Effect
+// Parallax Effect (desktop only)
 function initParallax() {
+    // Disable on mobile for performance
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
+    if (isMobile || !heroParallax) return;
+    
     let ticking = false;
-    if (heroParallax) {
-        document.addEventListener("mousemove", (e) => {
-            if (!ticking) {
-                window.requestAnimationFrame(() => {
-                    const x = (e.clientX / window.innerWidth - 0.5) * 15;
-                    const y = (e.clientY / window.innerHeight - 0.5) * 15;
-                    heroParallax.style.transform = `translate(${x}px, ${y}px) scale(1.05)`;
-                    ticking = false;
-                });
-                ticking = true;
-            }
-        });
-    }
+    document.addEventListener("mousemove", (e) => {
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                const x = (e.clientX / window.innerWidth - 0.5) * 15;
+                const y = (e.clientY / window.innerHeight - 0.5) * 15;
+                heroParallax.style.transform = `translate(${x}px, ${y}px) scale(1.05)`;
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
 }
 
 // Scroll Animations
@@ -356,6 +358,9 @@ function initTechSlider() {
     const container = document.getElementById("tech-slider-container");
     if (!slider || !container) return;
 
+    // Check if mobile
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
     let isDown = false;
     let startX;
     let scrollLeft;
@@ -379,16 +384,17 @@ function initTechSlider() {
         }, 3000);
     }
 
-    // Momentum scrolling
+    // Momentum scrolling (desktop only)
     function momentumLoop() {
+        if (isMobile) return;
         container.scrollLeft += velX;
-        velX *= 0.95; // Friction
+        velX *= 0.95;
         if (Math.abs(velX) > 0.5) {
             momentumID = requestAnimationFrame(momentumLoop);
         }
     }
 
-    // Mouse events
+    // Mouse events (desktop)
     slider.addEventListener("mousedown", (e) => {
         isDown = true;
         slider.classList.add("active");
@@ -427,32 +433,14 @@ function initTechSlider() {
         scrollLeft = container.scrollLeft;
     });
 
-    // Touch events for mobile
-    let lastTouchX = 0;
-    slider.addEventListener("touchstart", (e) => {
-        isDown = true;
-        startX = e.touches[0].pageX;
-        lastTouchX = startX;
-        scrollLeft = container.scrollLeft;
+    // Touch events - simple pause/resume, let native scroll handle the rest
+    container.addEventListener("touchstart", () => {
         cancelAnimationFrame(momentumID);
         pauseAnimation();
     }, { passive: true });
 
-    slider.addEventListener("touchend", () => {
-        isDown = false;
-        momentumID = requestAnimationFrame(momentumLoop);
+    container.addEventListener("touchend", () => {
         resumeAnimation();
-    });
-
-    slider.addEventListener("touchmove", (e) => {
-        if (!isDown) return;
-        const x = e.touches[0].pageX;
-        const walk = (x - startX) * 1.5;
-        velX = (x - lastTouchX) * 0.5;
-        lastTouchX = x;
-        container.scrollLeft = scrollLeft - walk;
-        scrollLeft = container.scrollLeft;
-        startX = x;
     }, { passive: true });
 }
 

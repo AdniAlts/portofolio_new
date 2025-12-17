@@ -15,6 +15,13 @@ html.dark .bg-grain {
     opacity: 0.15;
 }
 
+/* Disable grain on mobile for performance */
+@media (max-width: 768px) {
+    .bg-grain {
+        display: none;
+    }
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
     width: 6px;
@@ -187,10 +194,11 @@ html.dark .nav-link.active {
 /* Tech Slider Swipeable */
 #tech-slider-container {
     overflow-x: auto;
+    overflow-y: hidden;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
 }
 
 #tech-slider-container::-webkit-scrollbar {
@@ -202,9 +210,22 @@ html.dark .nav-link.active {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    will-change: transform;
+    touch-action: pan-x;
 }
 
 #tech-slider.active {
+    cursor: grabbing;
+}
+
+/* Disable tilt effect on mobile for performance */
+@media (max-width: 768px) {
+    .tilt-card:hover {
+        transform: none;
+    }
+    
+    .hero-parallax {
+        will-change: auto;
+    }
+}
     cursor: grabbing;
 }
